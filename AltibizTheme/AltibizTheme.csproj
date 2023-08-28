@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="wwwroot\js\swiper\**" />
+	  <EmbeddedResource Remove="wwwroot\js\swiper\**" />
+	  <None Remove="wwwroot\js\swiper\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Remove="Views\Liquid.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <RazorGenerate Remove="Views\Liquid.cshtml" />
+	  <RazorGenerate Remove="Views\_ViewImports.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\css\theme.css" />
+	  <None Include="wwwroot\css\theme.min.css" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="OrchardCore.ContentFields" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.ContentLocalization" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.ContentManagement" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.DisplayManagement" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.Liquid.Abstractions" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.Media" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.Media.Abstractions" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.Menu" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.Module.Targets" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.Queries.Abstractions" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.ResourceManagement" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.Taxonomies" Version="1.6.0" />
+	  <PackageReference Include="OrchardCore.Theme.Targets" Version="1.6.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Assets\dist\css\" />
+	</ItemGroup>
+
+</Project>
