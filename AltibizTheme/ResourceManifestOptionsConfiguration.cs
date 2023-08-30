@@ -64,14 +64,110 @@ namespace OrchardCore.Themes.AltibizTheme
                 .SetVersion("7.0.10");
 
             _manifest
-               .DefineScript("TopButtonScript")
-               .SetUrl("~/AltibizTheme/js/components/scroll-top-button.js")
-               .SetVersion("1.0.0");
+              .DefineScript("Audio-player")
+              .SetUrl("~/AltibizTheme/js/components/audio-player.js")
+              .SetVersion("1.0.0");
 
             _manifest
               .DefineScript("Carousel")
               .SetUrl("~/AltibizTheme/js/components/carousel.js")
               .SetVersion("1.0.0");
+
+            _manifest
+               .DefineScript("Element-parallax")
+               .SetUrl("~/AltibizTheme/js/components/element-parallax.js")
+               .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Form-validation")
+              .SetUrl("~/AltibizTheme/js/components/form-validation.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Gallery")
+              .SetUrl("~/AltibizTheme/js/components/gallery.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Hover-animation")
+              .SetUrl("~/AltibizTheme/js/components/hover-animation.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Input-formatter")
+              .SetUrl("~/AltibizTheme/js/components/input-formatter.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Masonry-grid")
+              .SetUrl("~/AltibizTheme/js/components/masonry-grid.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Parallax")
+              .SetUrl("~/AltibizTheme/js/components/parallax.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Password-visibility-toggle")
+              .SetUrl("~/AltibizTheme/js/components/password-visibility-toggle.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Popover")
+              .SetUrl("~/AltibizTheme/js/components/popover.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Price-switch")
+              .SetUrl("~/AltibizTheme/js/components/price-switch.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Range-slider")
+              .SetUrl("~/AltibizTheme/js/components/range-slider.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Scroll-top-button")
+              .SetUrl("~/AltibizTheme/js/components/scroll-top-button.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Smooth-scroll")
+              .SetUrl("~/AltibizTheme/js/components/smooth-scroll.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Sticky-navbar")
+              .SetUrl("~/AltibizTheme/js/components/sticky-navbar.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Subscription-form")
+              .SetUrl("~/AltibizTheme/js/components/subscription-form.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Theme-mode-switch")
+              .SetUrl("~/AltibizTheme/js/components/theme-mode-switch.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Toast")
+              .SetUrl("~/AltibizTheme/js/components/toast.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Tooltip")
+              .SetUrl("~/AltibizTheme/js/components/tooltip.js")
+              .SetVersion("1.0.0");
+
+            _manifest
+              .DefineScript("Video-button")
+              .SetUrl("~/AltibizTheme/js/components/video-button.js")
+              .SetVersion("1.0.0");
+
         }
 
         public void Configure(ResourceManagementOptions options)

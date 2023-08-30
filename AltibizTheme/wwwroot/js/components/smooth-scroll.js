@@ -3,20 +3,21 @@
  * @requires https://github.com/cferdinandi/smooth-scroll/
 */
 
-const smoothScroll = (() => {
+var smoothScroll = function () {
 
-  let selector = '[data-scroll]',
-  fixedHeader = '[data-scroll-header]',
-  scroll = new SmoothScroll(selector, {
-    speed: 800,
-    speedAsDuration: true,
-    offset: (anchor, toggle) => {
-      return toggle.dataset.scrollOffset || 40;
-    },
-    header: fixedHeader,
-    updateURL: false
-  });
+    var selector = '[data-scroll]';
+    var fixedHeader = '[data-scroll-header]';
 
-})();
+    var scroll = new SmoothScroll(selector, {
+        speed: 800,
+        speedAsDuration: true,
+        offset: function (anchor, toggle) {
+            return toggle.getAttribute('data-scroll-offset') || 40;
+        },
+        header: fixedHeader,
+        updateURL: false
+    });
 
-export default smoothScroll;
+};
+
+smoothScroll();

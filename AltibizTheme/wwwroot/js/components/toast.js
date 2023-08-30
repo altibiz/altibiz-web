@@ -3,12 +3,14 @@
  * @requires https://getbootstrap.com
 */
 
-const toast = (() => {
+var toast = function () {
 
-  let toastElList = [].slice.call(document.querySelectorAll('.toast'));
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'));
 
-  let toastList = toastElList.map((toastEl) => new bootstrap.Toast(toastEl));
+    var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+    });
 
-})();
+};
 
-export default toast;
+toast();

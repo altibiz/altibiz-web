@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ Culture.Name }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,8 +18,32 @@
     {% script name:"RellaxScript", at:"Foot" %}
     {% script name:"PolyfillsScript", at:"Foot" %}
     {% script name:"SwiperScript", at:"Foot" %}
-    {% script name:"TopButtonScript", at:"Foot" %}
+    
+    {% script name:"Audio-player", at:"Foot" %}
     {% script name:"Carousel", at:"Foot" %}
+    {% script name:"Element-parallax", at:"Foot" %}
+    {% script name:"Form-validation", at:"Foot" %}
+    {% script name:"Gallery", at:"Foot" %}
+    {% script name:"Hover-animation", at:"Foot" %}
+    {% script name:"Input-formatter", at:"Foot" %}
+    {% script name:"Masonry-grid", at:"Foot" %}
+    {% script name:"Parallax", at:"Foot" %}
+    {% script name:"Password-visibility-toggle", at:"Foot" %}
+    {% script name:"Popover", at:"Foot" %}
+    {% script name:"Price-switch", at:"Foot" %}
+    {% script name:"Range-slider", at:"Foot" %}
+    {% script name:"Scroll-top-button", at:"Foot" %}
+    {% script name:"Smooth-scroll", at:"Foot" %}
+    {% script name:"Sticky-navbar", at:"Foot" %}
+    {% script name:"Subscription-form", at:"Foot" %}
+    {% script name:"Theme-mode-switch", at:"Foot" %}
+    {% script name:"Toast", at:"Foot" %}
+    {% script name:"Tooltip", at:"Foot" %}
+    {% script name:"Video-button", at:"Foot" %}
+
+
+
+
 
 
     
@@ -175,18 +199,19 @@
       })();
     </script>
 </head>
+
+<html class="dark-mode" lang="{{ Culture.Name }}">
+
 <body>
-{% raw %}
-<!--
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="{{ '~/#page-top' | href }}">{{ Site.SiteName }}</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">{{ "Menu" | t }}<i class="fas fa-bars ms-1" aria-hidden="true"></i></button>
             {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
         </div>
     </nav>
-    -->
-{% endraw %}
+   
     {% render_section "Header", required: false %}
 	{% render_section "Messages", required: false %}
     {% render_section "Content" %}

@@ -3,14 +3,14 @@
  * @requires https://github.com/wagerfield/parallax
 */
 
-const parallax = (() => {
+var parallax = function () {
 
-  let element = document.querySelectorAll('.parallax');
+    var elements = document.querySelectorAll('.parallax');
 
-  for (let i = 0; i < element.length; i++) {
-    let parallaxInstance = new Parallax(element[i]);
-  }
+    for (var i = 0; i < elements.length; i++) {
+        var parallaxInstance = new Parallax(elements[i]);
+    }
 
-})();
+};
 
-export default parallax;
+parallax();

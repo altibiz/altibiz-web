@@ -1,34 +1,37 @@
 /**
  * Theme Mode Switch
- * Switch betwen light/dark mode. The chosen mode is saved to browser's local storage
+ * Switch between light/dark mode. The chosen mode is saved to the browser's local storage
 */
 
-const themeModeSwitch = (() => {
+var themeModeSwitch = function () {
 
-  let modeSwitch = document.querySelector('[data-bs-toggle="mode"]');
-  
-  if(modeSwitch === null) return;
+    var modeSwitch = document.querySelector('[data-bs-toggle="mode"]');
 
-  let checkbox = modeSwitch.querySelector('.form-check-input');
+    if (modeSwitch === null) return;
 
-  if (mode === 'dark') {
-    root.classList.add('dark-mode');
-    checkbox.checked = true;
-  } else {
-    root.classList.remove('dark-mode');
-    checkbox.checked = false;
-  }
+    var checkbox = modeSwitch.querySelector('.form-check-input');
+    var root = document.documentElement;
 
-  modeSwitch.addEventListener('click', (e) => {
-    if (checkbox.checked) {
-      root.classList.add('dark-mode');
-      window.localStorage.setItem('mode', 'dark');
+    var mode = window.localStorage.getItem('mode');
+
+    if (mode === 'dark') {
+        root.classList.add('dark-mode');
+        checkbox.checked = true;
     } else {
-      root.classList.remove('dark-mode');
-      window.localStorage.setItem('mode', 'light');
+        root.classList.remove('dark-mode');
+        checkbox.checked = false;
     }
-  });
 
-})();
+    modeSwitch.addEventListener('click', function (e) {
+        if (checkbox.checked) {
+            root.classList.add('dark-mode');
+            window.localStorage.setItem('mode', 'dark');
+        } else {
+            root.classList.remove('dark-mode');
+            window.localStorage.setItem('mode', 'light');
+        }
+    });
 
-export default themeModeSwitch;
+};
+
+themeModeSwitch();

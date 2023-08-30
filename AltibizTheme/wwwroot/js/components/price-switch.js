@@ -2,38 +2,37 @@
  * Price switch
 */
 
-const priceSwitch = (() => {
+var priceSwitch = function () {
 
-  let switcherWrapper = document.querySelectorAll('.price-switch-wrapper');
-  
-  if (switcherWrapper.length <= 0) return;
-  
-  for (let i = 0; i < switcherWrapper.length; i++) {
-    let switcher = switcherWrapper[i].querySelector('[data-bs-toggle="price"]');
+    var switcherWrapper = document.querySelectorAll('.price-switch-wrapper');
 
-    switcher.addEventListener('change', (e) => {
-      let checkbox = e.currentTarget.querySelector('input[type="checkbox"]'),
-          monthlyPrice = e.currentTarget.closest('.price-switch-wrapper').querySelectorAll('[data-monthly-price]'),
-          annualPrice = e.currentTarget.closest('.price-switch-wrapper').querySelectorAll('[data-annual-price]');
+    if (switcherWrapper.length <= 0) return;
 
-      for (let n = 0; n < monthlyPrice.length; n++) {
-        if (checkbox.checked == true) {
-          monthlyPrice[n].classList.add('d-none');
-        } else {
-          monthlyPrice[n].classList.remove('d-none');
-        }
-      }
+    for (var i = 0; i < switcherWrapper.length; i++) {
+        var switcher = switcherWrapper[i].querySelector('[data-bs-toggle="price"]');
 
-      for (let m = 0; m < monthlyPrice.length; m++) {
-        if (checkbox.checked == true) {
-          annualPrice[m].classList.remove('d-none');
-        } else {
-          annualPrice[m].classList.add('d-none');
-        }
-      }
-    });
-  }
-  
-})();
+        switcher.addEventListener('change', function (e) {
+            var checkbox = e.currentTarget.querySelector('input[type="checkbox"]');
+            var monthlyPrice = e.currentTarget.closest('.price-switch-wrapper').querySelectorAll('[data-monthly-price]');
+            var annualPrice = e.currentTarget.closest('.price-switch-wrapper').querySelectorAll('[data-annual-price]');
 
-export default priceSwitch;
+            for (var n = 0; n < monthlyPrice.length; n++) {
+                if (checkbox.checked == true) {
+                    monthlyPrice[n].classList.add('d-none');
+                } else {
+                    monthlyPrice[n].classList.remove('d-none');
+                }
+            }
+
+            for (var m = 0; m < monthlyPrice.length; m++) {
+                if (checkbox.checked == true) {
+                    annualPrice[m].classList.remove('d-none');
+                } else {
+                    annualPrice[m].classList.add('d-none');
+                }
+            }
+        });
+    }
+};
+
+priceSwitch();

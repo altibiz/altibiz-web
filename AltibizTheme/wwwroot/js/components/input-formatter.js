@@ -3,28 +3,29 @@
  * @requires https://github.com/nosir/cleave.js
 */
 
-const inputFormatter = (() => {
+var inputFormatter = function () {
+    var inputs = document.querySelectorAll('[data-format]');
+    if (inputs.length === 0) return;
 
-  let input = document.querySelectorAll('[data-format]');
-  if(input.length === 0) return;
-  
-  for(let i = 0; i < input.length; i++) {
+    for (var i = 0; i < inputs.length; i++) {
+        var targetInput = inputs[i];
+        var cardIcon = targetInput.parentNode.querySelector('.credit-card-icon');
+        var options, formatter;
 
-    let targetInput = input[i],
-        cardIcon = targetInput.parentNode.querySelector('.credit-card-icon'),
-        options,
-        formatter;
-    if(targetInput.dataset.format != undefined) options = JSON.parse(targetInput.dataset.format);
-    
-    if (cardIcon) {
-      formatter = new Cleave(targetInput, {...options, onCreditCardTypeChanged: (type) => {
-        cardIcon.className = 'credit-card-icon ' + type;
-      }});
-    } else {
-      formatter = new Cleave(targetInput, options);
+        if (targetInput.getAttribute('data-format') !== undefined) {
+            options = JSON.parse(targetInput.getAttribute('data-format'));
+        }
+
+        if (cardIcon) {
+            formatter = new Cleave(targetInput, Object.assign({}, options, {
+                onCreditCardTypeChanged: function (type) {
+                    cardIcon.className = 'credit-card-icon ' + type;
+                }
+            }));
+        } else {
+            formatter = new Cleave(targetInput, options);
+        }
     }
-  }
+};
 
-})();
-
-export default inputFormatter;
+inputFormatter();
