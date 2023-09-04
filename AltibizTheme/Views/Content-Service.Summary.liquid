@@ -1,14 +1,10 @@
-﻿
-
-    <div class="swiper-slide h-auto swiper-slide-active" role="group" aria-label="1 / 4" style="width: 271.75px; margin-right: 24px;">
-        <div class="card h-100">
-        <div class="card-body my-md-5 my-4 py-xl-2 py-md-0 py-sm-2 text-center">
-            <img src="{{Model.ContentItem.Content.Service.IconClass.Text}}" alt="Icon" class="d-block mb-3 mx-auto"/>
-            {{Model.ContentItem.Content.Service.IconClass.Text}}
-            <h3 class="h5 mb-3">{{Model.ContentItem.Content.TitlePart.Title}}</h3>
-            <p class="mb-0">{{Model.ContentItem.Content.HtmlBodyPart.Html}}</p>
-            {{ Model.ContentItem | console_log }}
-
-        </div>
-        </div>
-    </div>
+﻿<!-- Swiper item -->
+                <div class="swiper-slide h-auto">
+                    <div class="card h-100">
+                    <div class = "my-md-3"><i class="fas {{ Model.ContentItem.Content.Service.IconClass.Text}} fa-stack-1x fa-inverse"></i></div>
+                        <div class="card-body my-md-5 my-4 py-xl-2 py-md-0 py-sm-2 text-center">
+                            <h3 class="h5 mb-3">{{ Model.ContentItem.DisplayText }}</h3>
+                            <p class="mb-0">{{ Model.ContentItem.Content.HtmlBodyPart.Html | raw }}</p>
+                        </div>
+                    </div>
+                </div>
