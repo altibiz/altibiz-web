@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Options;
 using OrchardCore.ResourceManagement;
+using OrchardCore.Security;
 
 namespace OrchardCore.Themes.AltibizTheme
 {
@@ -62,6 +63,15 @@ namespace OrchardCore.Themes.AltibizTheme
                 .DefineStyle("BoxiconsStyle")
                 .SetUrl("~/AltibizTheme/css/boxicons.min.css", "~/AltibizTheme/css/boxicons.css")
                 .SetVersion("7.0.10");
+
+            //jQuery
+
+            _manifest
+              .DefineScript("jQuery")
+              .SetUrl("~/AltibizTheme/js/jquery-3.7.1.js")
+              .SetVersion("1.0.0");
+     
+            //Components
 
             _manifest
               .DefineScript("Audio-player")
