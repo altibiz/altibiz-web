@@ -4,7 +4,9 @@
         <div class="page-spinner"></div><span>Loading...</span>
     </div>
 </div>
-
+{%
+assign theContent = Model.ContentItem.Content
+%}
 
 <main class="page-wrapper">
 
@@ -65,10 +67,28 @@
         </div>
     </section>
 
+
+    <!-- About -->
+    <section class="container my-5 py-lg-5 py-md-4 py-3" id="about">
+        <div class="row gy-4 py-xl-3">
+            <div class="col-md-6">
+                <img src="/media/{{theContent.About.ContentItems[0].About.Aboutimage.Paths[0]}}" alt={{theContent.About.ContentItems[0].Image.Caption.Text}} class="rounded-3">
+            </div>
+            <div class="col-lg-5 col-md-6 offset-lg-1 d-flex">
+                <div class="align-self-center ps-lg-0 ps-md-4">
+                    <h2 class="h1 mb-lg-4 mb-3">{{theContent.About.ContentItems[0].DisplayText}}</h2>
+                    <p class="mb-4 pb-lg-3 fs-lg">{{theContent.About.ContentItems[0].HtmlBodyPart.Html}}</p>
+                    <a href="#" class="btn btn-lg btn-outline-primary">More about us</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Services -->
     <section class="container mb-5 pb-lg-5 pb-md-4 pb-3" id="services">
-        <h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">Сustom Software Solutions</h2>
-
+        <h2 class="h1 mt-5 mb-lg-5  mb-4 pb-lg-0 pb-md-2 text-center">Сustom Software Solutions</h2>
         <!-- Swiper slider -->
         <div class="swiper mb-xl-3" data-swiper-options='{
           "spaceBetween": 24,
@@ -92,8 +112,10 @@
           }
         }'>
             <div class="swiper-wrapper">
-                {% for service in Model.ContentItem.Content.Services.ContentItems %}
-                {{service | shape_build_display : "Summary" | shape_render }}
+                {% for service in theContent.Services.ContentItems %}
+                {{
+service | shape_build_display : "Summary" | shape_render
+                }}
                 {% endfor %}
             </div>
 
@@ -102,17 +124,46 @@
         </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Technologies -->
     <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
-        <h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">Explore Our Featured Projects</h2>
 
-        {% for project in Model.ContentItem.Content.Portfolio.ContentItems %}
-        {{project | shape_build_display : "Summary" | shape_render }}
-        {% endfor %}
+        <!-- Swiper slider -->
+        <div class="swiper mb-xl-3 text-center" data-swiper-options='{
+          "spaceBetween": 24,
+          "autoplay": true,
+          "breakpoints": {
+            "0": {
+              "slidesPerView": 2
+            },
+            "500": {
+              "slidesPerView": 3
+            },
+            "768": {
+              "slidesPerView": 4
+            },
+            "1200": {
+              "slidesPerView": 6
+            }
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          }
+        }'>
+            <div class="swiper-wrapper">
+                {% for technology in theContent.Technologies.ContentItems %}
+                {{technology | shape_build_display : "Summary" | shape_render }}
+                {% endfor %}
+            </div>
 
+            <!-- Swiper pagination -->
+            <div class="swiper-pagination position-static mt-4 pt-lg-3 pt-2"></div>
+        </div>
     </section>
 
-    <!-- Brands (carousel on screens < 1100px) -->
+    
+
+    <!-- Clients (carousel on screens < 1100px) -->
     <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
         <div class="swiper mx-n2" data-swiper-options='{
           "spaceBetween": 8,
@@ -133,30 +184,9 @@
           }
         }'>
             <div class="swiper-wrapper">
-
-                <->
-               
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
-
-                <!-- Item -->
-                <div class="swiper-slide py-3">
-                    <a href="#" class="card card-body card-hover px-2 mx-2">
-                        <img src="assets/img/brands/04.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
-                    </a>
-                </div>
+                {% for milestone in theContent.Clients.ContentItems %}
+                {{milestone | shape_build_display : "Summary" | shape_render }}
+                {% endfor %}
             </div>
 
             <!-- Pagination (bullets) -->
@@ -165,7 +195,165 @@
     </section>
 
 
+    <!-- Portfolio -->
+    <section id="portfolio" class="container mb-5 pb-lg-5 pb-md-4 pb-3">
+        <h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">Explore Our Featured Projects</h2>
 
+        {% for project in theContent.Portfolio.ContentItems %}
+        {{project | shape_build_display : "Summary" | shape_render }}
+        {% endfor %}
 
+    </section>
 
+     <!-- Industries (Slider) -->
+      <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
+        <h2 class="h1 mb-4 text-center d-lg-none">Industries We Serve</h2>
+        <div class="row gy-md-5 gy-4 mb-xl-3">
+          <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+            <h2 class="h1 mb-4 pb-3 pt-2 d-none d-lg-block">Industries We Serve</h2>
+
+            <!-- Swiper slider -->
+            <div class="swiper mx-0" data-swiper-options='{
+              "spaceBetween": 24,
+              "loop": true,
+              "tabs": true,
+              "autoHeight": true,
+              "navigation": {
+                "prevEl": "#prev-industry",
+                "nextEl": "#next-industry"
+              }
+            }'>
+              <div class="swiper-wrapper text-lg-start text-center">
+
+              {% for item in theContent.IndustriesText.ContentItems %}
+              <!-- Swiper item -->
+              {{item | shape_build_display : "Summary" | shape_render }}
+              {% endfor %}
+
+              </div>
+            </div>
+
+            <!-- Swiper controls (Prev / next buttons) -->
+            <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
+              <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-7 offset-xl-1 order-1 order-lg-2">
+
+            <!-- Swiper tabs (Industry images) -->
+            <div class="swiper-tabs">
+
+            {% for image in theContent.IndustriesImages.ContentItems %}
+            {{image | shape_build_display : "Summary" | shape_render }}
+            {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case studies -->
+      <section class="bg-secondary pt-1">
+        <div class="container">
+          <h2 class="h1 text-center text-md-start mb-lg-4">Case Studies</h2>
+          <div class="row align-items-center pb-5">
+            <div class="col-md-8 col-lg-7 col-xl-6 text-center text-md-start">
+              <p class="fs-lg text-muted mb-md-0">We bring real solutions to each client’s problems through a deep understanding of their market, solution, and vision.</p>
+            </div>
+            <div class="col-md-4 col-lg-5 col-xl-6 d-flex justify-content-center justify-content-md-end">
+              <a href="#" class="btn btn-outline-primary btn-lg">See all case studies</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="position-relative py-lg-4 py-xl-5">
+
+          <!-- Swiper tabs -->
+          <div class="swiper-tabs position-absolute top-0 start-0 w-100 h-100">
+            <div id="image-1" class="jarallax position-absolute top-0 start-0 w-100 h-100 swiper-tab active" data-jarallax data-speed="0.4">
+              <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+              <div class="jarallax-img" style="background-image: url(assets/img/landing/software-agency-1/case-study01.jpg);"></div>
+            </div>
+            <div id="image-2" class="jarallax position-absolute top-0 start-0 w-100 h-100 swiper-tab" data-jarallax data-speed="0.4">
+              <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+              <div class="jarallax-img" style="background-image: url(assets/img/landing/software-agency-1/case-study02.jpg);"></div>
+            </div>
+          </div>
+
+          <!-- Swiper slider -->
+          <div class="container position-relative zindex-5 py-5">
+            <div class="row py-2 py-md-3">
+              <div class="col-xl-5 col-lg-7 col-md-9">
+
+                <!-- Slider controls (Prev / next) -->
+                <div class="d-flex justify-content-center justify-content-md-start pb-3 mb-3">
+                  <button type="button" id="case-study-prev" class="btn btn-prev btn-icon btn-sm bg-white me-2">
+                    <i class="bx bx-chevron-left"></i>
+                  </button>
+                  <button type="button" id="case-study-next" class="btn btn-next btn-icon btn-sm bg-white ms-2">
+                    <i class="bx bx-chevron-right"></i>
+                  </button>
+                </div>
+
+                <!-- Card -->
+                <div class="card bg-white shadow-sm p-3">
+                  <div class="card-body">
+                    <div class="swiper" data-swiper-options='{
+                      "spaceBetween": 30,
+                      "loop": true,
+                      "tabs": true,
+                      "pagination": {
+                        "el": "#case-study-pagination",
+                        "clickable": true
+                      },
+                      "navigation": {
+                        "prevEl": "#case-study-prev",
+                        "nextEl": "#case-study-next"
+                      }
+                    }'>
+                      <div class="swiper-wrapper">
+
+                        <!-- Item -->
+                        <div class="swiper-slide" data-swiper-tab="#image-1">
+                          <img src="assets/img/landing/software-agency-1/case-study-logo01.png" class="d-block mb-3" width="72" alt="Logo">
+                          <h3 class="mb-2">Cashless payment case study</h3>
+                          <p class="fs-sm text-muted border-bottom pb-3 mb-3">Payment Service Provider Company</p>
+                          <p class="pb-2 pb-lg-3 mb-3">Aenean dolor elit tempus tellus imperdiet. Elementum, ac convallis morbi sit est feugiat ultrices. Cras tortor maecenas pulvinar nec ac justo. Massa sem eget semper...</p>
+                          <a href="#" class="btn btn-primary">View case study</a>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="swiper-slide" data-swiper-tab="#image-2">
+                          <img src="assets/img/landing/software-agency-1/case-study-logo02.png" class="d-block mb-3" width="72" alt="Logo">
+                          <h3 class="mb-2">Smart tech case study</h3>
+                          <p class="fs-sm text-muted border-bottom pb-3 mb-3">Data Analytics Company</p>
+                          <p class="pb-2 pb-lg-3 mb-3">Adipiscing quis a at ligula. Gravida gravida diam rhoncus cursus in. Turpis sagittis tempor gravida phasellus sapien. Faucibus donec consectetur sed id sit nisl.</p>
+                          <a href="#" class="btn btn-primary">View case study</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pagination (bullets) -->
+                <div class="dark-mode pt-4 mt-3">
+                  <div id="case-study-pagination" class="swiper-pagination position-relative bottom-0"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 </main>
+
+
+<!-- Back to top button -->
+<a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+</a>

@@ -1,0 +1,9 @@
+﻿ <!-- Industry Image -->
+{% if Model.ContentItem.Content.IndustryImage.Active.Value %}
+<div id={{Model.ContentItem.Content.IndustryImage.Id.Text}} class="swiper-tab active">
+{% else %}
+<div id={{Model.ContentItem.Content.IndustryImage.Id.Text}} class="swiper-tab">
+{% endif %}
+    <img src=/media/{{Model.ContentItem.Content.IndustryImage.Media.Paths[0]}} class="rounded-3" alt="Image">
+</div>
+
