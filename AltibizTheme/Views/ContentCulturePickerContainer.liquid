@@ -1,0 +1,7 @@
+﻿<div >
+    {% for culture in Model.SupportedCultures %}
+    {{culture | console_log}}
+    <a class="culture-picker"  href="{{culture.Name | switch_culture_url }}">{{culture.TwoLetterISOLanguageName}}</a>
+    {% endfor %}
+</div>
+

@@ -45,11 +45,6 @@
     {% script name:"Tooltip", at:"Foot" %}
     {% script name:"Video-button", at:"Foot" %}
 
-
-
-
-
-
     
     {% resources type: "HeadScript" %}
     {% resources type: "HeadLink" %}
@@ -208,15 +203,18 @@
 
 <body>
 
-   
-
-    {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
+    
    
     {% render_section "Header", required: false %}
+    {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
+    
 	{% render_section "Messages", required: false %}
     {% render_section "Content" %}
     {% render_section "Footer", required: false %}
     {% resources type: "FootScript" %}
 
+    
+
 </body>
 </html>
+

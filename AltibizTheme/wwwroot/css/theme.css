@@ -500,6 +500,14 @@ progress {
   }
 }
 
+.culture-picker {
+    color: white;
+    text-decoration: none;
+    margin: 0.5vw;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 800;
@@ -15265,12 +15273,12 @@ a.badge {
     padding-left: calc(var(--si-steps-padding-x) * 0.875);
   }
 }
-.jarallax {
+.parallax {
   position: relative;
   z-index: 0;
 }
 
-.jarallax .jarallax-img {
+.parallax .parallax-img {
   position: absolute;
   top: 0;
   left: 0;

@@ -3,5 +3,5 @@
     {% if link.Url contains "#" %}
         data-bs-target="{{ link.Url | split: '/' | last }}"
     {% endif %}>
-{{ Model.ContentItem.DisplayText }}</a>
+<strong>{{ Model.ContentItem.DisplayText }}</strong></a>
 

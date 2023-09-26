@@ -1,26 +1,38 @@
 <header class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky">
     <div class="container px-3">
-    <a class="navbar-brand" href="{{ '~/#page-top' | href }}">
-    <img src="/media/logos/altibiz-logo.png" width="200" height="300" alt="Company logo"> 
-    </a>
-        <div class="offcanvas-body" id="navbarResponsive">
+        <a class="navbar-brand pe-3" href="{{ '~/#page-top' | href }}"><img src="/media/altibiz-logo/just-another-logo.png" width="200" height="300" alt="Company logo"> </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end bg-dark"">
+            <div class="offcanvas-header border-bottom border-light">
+              <h5 class="offcanvas-title text-white">Menu</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">    
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     {% for item in Model.Items %}
                     {{ item | shape_render }}
-                    {% endfor %}
+                    {% endfor %}  
                 </ul>
-        </div>
-    </div>
-     <div class="dark-mode pe-lg-1 ms-auto me-4">
-            <div class="form-check form-switch mode-switch" data-bs-toggle="mode">
-              <input type="checkbox" class="form-check-input" id="theme-mode">
-              <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-              <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
             </div>
-          </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <div class="offcanvas-header border-top border-light">
+              {% shape "ContentCulturePicker" %}
+            </div>
+        </div>
+       
+        
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <span class="d-none d-lg-inline-flex">
+        {% shape "ContentCulturePicker" %}
+		</span>
+        
+
+    </div>
+
 </header>
+
+
 
 
