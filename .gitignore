@@ -396,7 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-/Web/App_Data/
+/Web/App_Data/tenants.json
+/Web/App_Data/Sites/Default/appsettings.json
+/Web/App_Data/Sites/Default/DataProtection-Keys
+/Web/App_Data/Sites/Default/DataProtection-Keys/*
 /Web/wwwroot/Default/
 /Web/Localization/*/OrchardCore*
 /Web/Localization/*/TheTheme.po
@@ -404,3 +407,4 @@ FodyWeavers.xsd
 /Web/Localization/*/SafeMode.po
 /Web/Localization/*/TheBlogTheme.po
 /Web/Localization/*/TheAgencyTheme.po
+

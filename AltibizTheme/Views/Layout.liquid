@@ -206,8 +206,12 @@
     
    
     {% render_section "Header", required: false %}
-    {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
-    
+
+    {% assign dynamic_cache = Culture.Name | append: "-main-menu" %}
+    {% assign dynamic_cache_tag = "alias:" | append: dynamic_cache %}
+	{% assign dynamic_alias = "alias:" | append: dynamic_cache %}
+    {% shape "menu", alias: dynamic_alias, cache_id: dynamic_cache, cache_expires_after: "00:00:01", cache_tag: dynamic_cache_tag %}
+
 	{% render_section "Messages", required: false %}
     {% render_section "Content" %}
     {% render_section "Footer", required: false %}

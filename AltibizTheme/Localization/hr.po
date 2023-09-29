@@ -1,1 +1,35 @@
-﻿
+﻿msgid "Start your project"
+msgstr "Krenite s projektom"
+
+msgid "Top"
+msgstr "Najbolja"
+
+msgid " software"
+msgstr " softverska"
+
+msgid " engineering company"
+msgstr " inženjerska tvrtka"
+
+msgid "I need web development"
+msgstr "Trebam web development"
+
+msgid "I need Microsoft solutions partner"
+msgstr "Trebam partnera za Microsoft rješenja"
+
+msgid "I need MVP"
+msgstr "Trebam MVP"
+
+msgid "I need solutions that power my business"
+msgstr "Trebam rješenja koja pokreću moj posao"
+
+msgid "We are the Top Rated agency on"
+msgstr "Mi smo najbolje ocijenjena agencija na"
+
+msgid "Сustom Software Solutions"
+msgstr "Prilagođena softverska rješenja"
+
+msgid "Our Featured Projects"
+msgstr "Naši istaknuti projekti"
+
+msgid "Show Page"
+msgstr "Prikaži stranicu"

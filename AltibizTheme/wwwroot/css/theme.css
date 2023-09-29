@@ -500,6 +500,16 @@ progress {
   }
 }
 
+.custom-container {
+    position: relative;
+}
+
+.anchor {
+    position: absolute;
+    top: -100px; 
+    left: 0px;
+}
+
 .culture-picker {
     color: white;
     text-decoration: none;
@@ -7734,7 +7744,8 @@ textarea.form-control-lg {
 
 /* rtl:end:remove */
 .text-primary {
-  color: #6366f1 !important;
+    /*color: #6366f1 !important;*/
+    color: #5eaee1 !important;
 }
 
 .text-secondary {
@@ -12254,13 +12265,13 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
 }
 
 .btn-primary {
-  --si-btn-hover-color: #fff;
-  --si-btn-active-color: #fff;
-  --si-btn-hover-bg: #4044ee;
-  --si-btn-active-bg: #4044ee;
-  --si-btn-hover-border-color: #4044ee;
-  --si-btn-active-border-color: #4044ee;
-  --si-btn-disabled-color: #fff;
+    --si-btn-hover-color: #fff;
+    --si-btn-active-color: #fff;
+    --si-btn-hover-bg: #4044ee;
+    --si-btn-active-bg: #4044ee;
+    --si-btn-hover-border-color: #4044ee;
+    --si-btn-active-border-color: #4044ee;
+    --si-btn-disabled-color: #fff;
 }
 
 .btn-secondary {

@@ -1,4 +1,5 @@
 ﻿
+
  <!-- Page loading spinner -->
 <div class="page-loading active">
     <div class="page-loading-inner">
@@ -17,12 +18,12 @@ assign theContent = Model.ContentItem.Content
             <div class="row gy-5">
                 <div class="col-xl-5 col-lg-6">
                     <div class="position-relative zindex-5 text-lg-start text-center">
-                        <h1 class="display-2 mb-4 pb-lg-3 pb-md-2">Top <span class="text-primary">software</span> engineering company</h1>
+                        <h1 class="display-2 mb-4 pb-lg-3 pb-md-2">{{"Top" | t}}<span class="text-primary">{{" software" | t}}</span>{{" engineering company" | t}}</h1>
                         <p class="mb-4 pb-lg-3 pb-md-2">
-                            <span class="me-2 text-light">@T["We are the Top Rated agency on"]</span>
+                            <span class="me-2 text-light">{{"We are the Top Rated agency on" | t}}</span>
                             <img src="/media/about/clutch-rating.png" width="193" alt="Clutch rating" class="mt-n1">
                         </p>
-                        <a href="#" class="btn btn-lg btn-primary">Start your project</a>
+                        <a href="#" class="btn btn-lg btn-primary">{{"Start your project" | t}}</a>
                     </div>
                 </div>
                 <div class="col-lg-6 offset-xl-1">
@@ -37,12 +38,12 @@ assign theContent = Model.ContentItem.Content
                                 <div class="d-sm-grid d-flex gap-xl-4 gap-lg-3 gap-md-4 gap-sm-3 gap-2">
                                     <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
                                         <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
-                                            <span class="hero-animation-fade text-white">I need AI engineers</span>
+                                            <span class="hero-animation-fade text-white">{{"I need web development" | t}}</span>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
                                         <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
-                                            <span class="hero-animation-fade hero-animation-delay-2 text-white">We are looking for Shopify Experts</span>
+                                            <span class="hero-animation-fade hero-animation-delay-2 text-white">{{ "I need Microsoft solutions partner" | t}}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -51,12 +52,12 @@ assign theContent = Model.ContentItem.Content
                                 <div class="d-sm-grid d-flex gap-xl-4 gap-lg-3 gap-md-4 gap-sm-3 gap-2">
                                     <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
                                         <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
-                                            <span class="hero-animation-fade hero-animation-delay-1 text-white">I need MVP for startup</span>
+                                            <span class="hero-animation-fade hero-animation-delay-1 text-white">{{"I need MVP" | t}}</span>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
                                         <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
-                                            <span class="hero-animation-fade hero-animation-delay-3 text-white">I need web development</span>
+                                            <span class="hero-animation-fade hero-animation-delay-3 text-white">{{"I need solutions that power my business" | t}}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -70,26 +71,22 @@ assign theContent = Model.ContentItem.Content
 
 
     <!-- About -->
-    <section class="container my-5 py-lg-5 py-md-4 py-3" id="about">
-        <div class="row gy-4 py-xl-3">
-            <div class="col-md-6">
-                <img src="/media/{{theContent.About.ContentItems[0].About.Aboutimage.Paths[0]}}" alt={{theContent.About.ContentItems[0].Image.Caption.Text}} class="rounded-3">
-            </div>
-            <div class="col-lg-5 col-md-6 offset-lg-1 d-flex">
-                <div class="align-self-center ps-lg-0 ps-md-4">
-                    <h2 class="h1 mb-lg-4 mb-3">{{theContent.About.ContentItems[0].DisplayText}}</h2>
-                    <p class="mb-4 pb-lg-3 fs-lg">{{theContent.About.ContentItems[0].HtmlBodyPart.Html}}</p>
-                    <a href="#" class="btn btn-lg btn-outline-primary">More about us</a>
 
-                </div>
-            </div>
+     <section class="container pb-5 mb-md-2 mb-lg-4">
+     <!-- https://stackoverflow.com/questions/67839180/navbar-covering-content-when-i-click-on-a-link-to-navigate-to-different-sections -->
+        <div class="custom-container">
+          <h1 class="border-bottom mt-5 pb-1">{{theContent.About.ContentItems[0].DisplayText}}</h1>
+          <a class="anchor" name="about"></a>
         </div>
-    </section>
-
+         <div class="row pt-2 pt-md-3">{{theContent.About.ContentItems[0].HtmlBodyPart.Html | raw}}</div>
+      </section>
 
     <!-- Services -->
-    <section class="container mb-5 pb-lg-5 pb-md-4 pb-3" id="services">
-        <h2 class="h1 mt-5 mb-lg-5  mb-4 pb-lg-0 pb-md-2 text-center">Сustom Software Solutions</h2>
+    <section class="container mb-5 pb-lg-5 pb-md-4 pb-3 " >
+        <div class=" mt-5 custom-container">
+            <h2 class="h1 mt-5 mb-lg-5  mb-4 pb-lg-0 pb-md-2 text-center">{{"Сustom Software Solutions" | t}}</h2>
+            <a class="anchor" name="services"></a>
+        </div>
         <!-- Swiper slider -->
         <div class="swiper mb-xl-3" data-swiper-options='{
           "spaceBetween": 24,
@@ -197,8 +194,11 @@ service | shape_build_display : "Summary" | shape_render
 
 
     <!-- Portfolio -->
-    <section id="portfolio" class="container mb-5 pb-lg-5 pb-md-4 pb-3">
-        <h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">Explore Our Featured Projects</h2>
+    <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
+        <div class="custom-container">
+             <h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">{{"Our Featured Projects" | t}}</h2>
+             <a class="anchor" name="portfolio"></a>
+        </div>
 
         {% for project in theContent.Portfolio.ContentItems %}
         {{project | shape_build_display : "Summary" | shape_render }}
