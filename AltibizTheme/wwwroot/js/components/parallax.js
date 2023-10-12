@@ -1,16 +1,16 @@
 /**
- * Mouse move parallax effect
- * @requires https://github.com/wagerfield/parallax
+ * Mouse move jarallax effect
+ * @requires https://github.com/wagerfield/jarallax
 */
 
-var parallax = function () {
+var jarallax = function () {
 
-    var elements = document.querySelectorAll('.parallax');
+    var elements = document.querySelectorAll('.jarallax');
 
     for (var i = 0; i < elements.length; i++) {
-        var parallaxInstance = new Parallax(elements[i]);
+        var jarallaxInstance = new jarallax(elements[i]);
     }
 
 };
 
-parallax();
+jarallax();

@@ -1,4 +1,4 @@
 ﻿<div class="swiper-slide" data-swiper-tab={{Model.ContentItem.Content.IndustryText.IdLink.Text}}>
     <h3 class="h5 mb-lg-4 mb-3">{{Model.ContentItem.DisplayText}}</h3>
-    <p>{{Model.ContentItem.Content.HtmlBodyPart.Html}}</p>
+    <p>{{Model.ContentItem.Content.HtmlBodyPart.Html | raw}}</p>
 </div>

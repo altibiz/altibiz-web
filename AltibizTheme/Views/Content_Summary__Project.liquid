@@ -1,14 +1,19 @@
 ﻿ <!-- Project item -->
         <div class="row gy-4 mb-4 pb-md-3 pb-2">
-          <div class="col-md-6 rellax" data-rellax-percentage="0.5" data-rellax-speed="0.5" data-disable-parallax-down="md">
+          <div class="col-md-6 rellax" data-rellax-percentage="0.5" data-rellax-speed="0.5" data-disable-jarallax-down="md">
             <div class="bg-secondary rounded-3">
               <img  src="/media/{{Model.ContentItem.Content.Project.Image.Paths[0]}}" alt="Project image">
             </div>
           </div>
-          <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 offset-lg-1 d-flex rellax" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md">
+          <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 offset-lg-1 d-flex rellax" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-jarallax-down="md">
             <div class="align-self-center ps-lg-0 ps-md-4">
-              <h3 class="h2 mb-lg-4 mb-3">{{Model.ContentItem.DisplayText}}</h3>
+              <h4 class="mb-lg-4 mb-3 fs-base fw-normal text-body">{{Model.ContentItem.Content.Project.Category.Text}}</h4>
+              <h3 class=" mb-lg-2">{{Model.ContentItem.DisplayText}}</h3>
+              {%if Model.ContentItem.Content.Project.ClientWebsiteLink.Url != ""%}
+              <i class="mb-lg-4 mb-3 fs-base fw-normal text-body">by<a target="_blank" style="text-decoration:none" href="{{Model.ContentItem.Content.Project.ClientWebsiteLink.Url}}">{{Model.ContentItem.Content.Project.ClientWebsiteLink.Text}}</a> </i> 
+              {%endif%}
               <p class="mb-lg-4 mb-3">{{ Model.ContentItem.Content.HtmlBodyPart.Html | raw }}</p>
+              
               {%comment%}
               <ul class="mb-lg-4 mb-3 fs-sm text-muted list-inline" style="max-width: 19.125rem;">
                   {% assign tagValues = Model.ContentItem.Content.Project.Tags.Values %}
@@ -24,11 +29,11 @@
                   {%endfor%}
               </ul>
               {%endcomment%}
+              
               {% if Model.ContentItem.Content.Project.LinkToProject.Url != "" %}
               <a href="{{Model.ContentItem.Content.Project.LinkToProject.Url}}" target="_blank" class="mt- btn btn-lg btn-outline-primary">{{"Show Page" | t}}</a>
               {%endif%}
              </div>
           </div>
         </div>
-
 

@@ -16,8 +16,11 @@
     {% script name:"AltibizTheme-bootstrap-bundle", at:"Foot" %}    
     {% script name:"AltibizTheme", at:"Foot" %}
     {% script name:"RellaxScript", at:"Foot" %}
+    {% script name:"JarallaxScript", at:"Foot" %}
     {% script name:"PolyfillsScript", at:"Foot" %}
     {% script name:"SwiperScript", at:"Foot" %}
+
+    
 
     <!-- jQuery -->
     {% script name:"jQuery", at:"Foot" %}
@@ -25,13 +28,13 @@
     <!-- Components -->
     {% script name:"Audio-player", at:"Foot" %}
     {% script name:"Carousel", at:"Foot" %}
-    {% script name:"Element-parallax", at:"Foot" %}
+    {% script name:"Element-jarallax", at:"Foot" %}
     {% script name:"Form-validation", at:"Foot" %}
     {% script name:"Gallery", at:"Foot" %}
     {% script name:"Hover-animation", at:"Foot" %}
     {% script name:"Input-formatter", at:"Foot" %}
     {% script name:"Masonry-grid", at:"Foot" %}
-    {% script name:"Parallax", at:"Foot" %}
+    {% script name:"jarallax", at:"Foot" %}
     {% script name:"Password-visibility-toggle", at:"Foot" %}
     {% script name:"Popover", at:"Foot" %}
     {% script name:"Price-switch", at:"Foot" %}
@@ -214,11 +217,16 @@
 
 	{% render_section "Messages", required: false %}
     {% render_section "Content" %}
-    {% render_section "Footer", required: false %}
+    {%comment%}
+    {% render_section "Footer" %}
+    {%endcomment%}
+    {{Model.Footer | shape_render}}
     {% resources type: "FootScript" %}
+
 
     
 
 </body>
 </html>
 
+{{Model.Footer | console_log}}

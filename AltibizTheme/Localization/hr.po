@@ -1,14 +1,14 @@
 ﻿msgid "Start your project"
 msgstr "Krenite s projektom"
 
-msgid "Top"
-msgstr "Najbolja"
+msgid "Coding the"
+msgstr "Coding the"
 
-msgid " software"
-msgstr " softverska"
+msgid " future"
+msgstr " future"
 
-msgid " engineering company"
-msgstr " inženjerska tvrtka"
+msgid " of business"
+msgstr " of business"
 
 msgid "I need web development"
 msgstr "Trebam web development"
@@ -22,8 +22,14 @@ msgstr "Trebam MVP"
 msgid "I need solutions that power my business"
 msgstr "Trebam rješenja koja pokreću moj posao"
 
-msgid "We are the Top Rated agency on"
-msgstr "Mi smo najbolje ocijenjena agencija na"
+msgid "Intelligent business solutions for a "
+msgstr "Pametna poslovna rješenja za "
+
+msgid " world"
+msgstr " svijet"
+
+msgid "Contact us"
+msgstr "Kontaktirajte nas"
 
 msgid "Сustom Software Solutions"
 msgstr "Prilagođena softverska rješenja"
@@ -33,3 +39,6 @@ msgstr "Naši istaknuti projekti"
 
 msgid "Show Page"
 msgstr "Prikaži stranicu"
+
+msgid "Solutions We Created"
+msgstr "Rješenja koja smo stvorili"

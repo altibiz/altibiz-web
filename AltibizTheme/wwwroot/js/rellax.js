@@ -1,12 +1,12 @@
 
 // ------------------------------------------
 // Rellax.js
-// Buttery smooth parallax library
+// Buttery smooth jarallax library
 // Copyright (c) 2016 Moe Amaya (@moeamaya)
 // MIT license
 //
 // Thanks to Paraxify.js and Jaime Cabllero
-// for parallax concepts
+// for jarallax concepts
 // ------------------------------------------
 
 (function (root, factory) {
@@ -205,7 +205,7 @@
       }
     };
 
-    // We want to cache the parallax blocks'
+    // We want to cache the jarallax blocks'
     // values: base, top, height, speed
     // el: is dom object, return: el cache values
     var createBlock = function(el) {
@@ -260,7 +260,7 @@
       var blockLeft = posX + el.getBoundingClientRect().left;
       var blockWidth = el.clientWidth || el.offsetWidth || el.scrollWidth;
 
-      // apparently parallax equation everyone uses
+      // apparently jarallax equation everyone uses
       var percentageY = dataPercentage ? dataPercentage : (posY - blockTop + screenY) / (blockHeight + screenY);
       var percentageX = dataPercentage ? dataPercentage : (posX - blockLeft + screenX) / (blockWidth + screenX);
       if(self.options.center){ percentageX = 0.5; percentageY = 0.5; }
@@ -396,7 +396,7 @@
       }
     };
 
-    // Transform3d on parallax element
+    // Transform3d on jarallax element
     var animate = function() {
       var positions;
       for (var i = 0; i < self.elems.length; i++){

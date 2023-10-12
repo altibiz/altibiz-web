@@ -6976,14 +6976,14 @@
       });
     }
 
-    function Parallax(_ref) {
+    function jarallax(_ref) {
       let {
         swiper,
         extendParams,
         on
       } = _ref;
       extendParams({
-        parallax: {
+        jarallax: {
           enabled: false
         }
       });
@@ -6994,11 +6994,11 @@
         } = swiper;
         const $el = $(el);
         const rtlFactor = rtl ? -1 : 1;
-        const p = $el.attr('data-swiper-parallax') || '0';
-        let x = $el.attr('data-swiper-parallax-x');
-        let y = $el.attr('data-swiper-parallax-y');
-        const scale = $el.attr('data-swiper-parallax-scale');
-        const opacity = $el.attr('data-swiper-parallax-opacity');
+        const p = $el.attr('data-swiper-jarallax') || '0';
+        let x = $el.attr('data-swiper-jarallax-x');
+        let y = $el.attr('data-swiper-jarallax-y');
+        const scale = $el.attr('data-swiper-jarallax-scale');
+        const opacity = $el.attr('data-swiper-jarallax-opacity');
 
         if (x || y) {
           x = x || '0';
@@ -7043,7 +7043,7 @@
           progress,
           snapGrid
         } = swiper;
-        $el.children('[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]').each(el => {
+        $el.children('[data-swiper-jarallax], [data-swiper-jarallax-x], [data-swiper-jarallax-y], [data-swiper-jarallax-opacity], [data-swiper-jarallax-scale]').each(el => {
           setTransform(el, progress);
         });
         slides.each((slideEl, slideIndex) => {
@@ -7054,7 +7054,7 @@
           }
 
           slideProgress = Math.min(Math.max(slideProgress, -1), 1);
-          $(slideEl).find('[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]').each(el => {
+          $(slideEl).find('[data-swiper-jarallax], [data-swiper-jarallax-x], [data-swiper-jarallax-y], [data-swiper-jarallax-opacity], [data-swiper-jarallax-scale]').each(el => {
             setTransform(el, slideProgress);
           });
         });
@@ -7068,29 +7068,29 @@
         const {
           $el
         } = swiper;
-        $el.find('[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]').each(parallaxEl => {
-          const $parallaxEl = $(parallaxEl);
-          let parallaxDuration = parseInt($parallaxEl.attr('data-swiper-parallax-duration'), 10) || duration;
-          if (duration === 0) parallaxDuration = 0;
-          $parallaxEl.transition(parallaxDuration);
+        $el.find('[data-swiper-jarallax], [data-swiper-jarallax-x], [data-swiper-jarallax-y], [data-swiper-jarallax-opacity], [data-swiper-jarallax-scale]').each(jarallaxEl => {
+          const $jarallaxEl = $(jarallaxEl);
+          let jarallaxDuration = parseInt($jarallaxEl.attr('data-swiper-jarallax-duration'), 10) || duration;
+          if (duration === 0) jarallaxDuration = 0;
+          $jarallaxEl.transition(jarallaxDuration);
         });
       };
 
       on('beforeInit', () => {
-        if (!swiper.params.parallax.enabled) return;
+        if (!swiper.params.jarallax.enabled) return;
         swiper.params.watchSlidesProgress = true;
         swiper.originalParams.watchSlidesProgress = true;
       });
       on('init', () => {
-        if (!swiper.params.parallax.enabled) return;
+        if (!swiper.params.jarallax.enabled) return;
         setTranslate();
       });
       on('setTranslate', () => {
-        if (!swiper.params.parallax.enabled) return;
+        if (!swiper.params.jarallax.enabled) return;
         setTranslate();
       });
       on('setTransition', (_swiper, duration) => {
-        if (!swiper.params.parallax.enabled) return;
+        if (!swiper.params.jarallax.enabled) return;
         setTransition(duration);
       });
     }
@@ -10693,7 +10693,7 @@
     }
 
     // Swiper Class
-    const modules = [Virtual, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar, Parallax, Zoom, Lazy, Controller, A11y, History, HashNavigation, Autoplay, Thumb, freeMode, Grid, Manipulation, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCreative, EffectCards];
+    const modules = [Virtual, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar, jarallax, Zoom, Lazy, Controller, A11y, History, HashNavigation, Autoplay, Thumb, freeMode, Grid, Manipulation, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCreative, EffectCards];
     Swiper.use(modules);
 
     return Swiper;

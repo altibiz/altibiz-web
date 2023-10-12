@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AltibizTheme", "AltibizThem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carousel.OrchardCore", "Carousel.OrchardCore\Carousel.OrchardCore.csproj", "{5A91A36B-D78A-45E6-B655-7C4922E6D288}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1ED700F-D577-4C31-9311-10B22A5071BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

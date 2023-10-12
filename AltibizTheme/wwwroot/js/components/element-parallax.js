@@ -1,10 +1,10 @@
 /**
- * Element parallax effect
+ * Element jarallax effect
  * @requires https://github.com/dixonandmoe/rellax
  */
 
-// Element parallax initialization
-var elementParallax = function () {
+// Element jarallax initialization
+var elementjarallax = function () {
     var el = document.querySelector('.rellax');
 
     if (el === null) return;
@@ -14,4 +14,4 @@ var elementParallax = function () {
     });
 };
 
-elementParallax();
+elementjarallax();

@@ -18,12 +18,11 @@ assign theContent = Model.ContentItem.Content
             <div class="row gy-5">
                 <div class="col-xl-5 col-lg-6">
                     <div class="position-relative zindex-5 text-lg-start text-center">
-                        <h1 class="display-2 mb-4 pb-lg-3 pb-md-2">{{"Top" | t}}<span class="text-primary">{{" software" | t}}</span>{{" engineering company" | t}}</h1>
-                        <p class="mb-4 pb-lg-3 pb-md-2">
-                            <span class="me-2 text-light">{{"We are the Top Rated agency on" | t}}</span>
-                            <img src="/media/about/clutch-rating.png" width="193" alt="Clutch rating" class="mt-n1">
-                        </p>
-                        <a href="#" class="btn btn-lg btn-primary">{{"Start your project" | t}}</a>
+                        <h1 class="display-2 mb-0 pb-lg-3 pb-md-2">{{"Coding the" | t}}<span class="text-primary">{{" future" | t}}</span>{{" of business" | t}}</h1>
+                        <p>
+                            <h5 class="text-light">{{"Intelligent business solutions for a " | t}}<i>"big data"</i><span class=" text-light">{{" world" | t}}</span></h5>
+                        </p>         
+                         <a href="mailto:mail@altibiz.com" class=" mt-3 btn btn-lg btn-primary">{{"Contact us" | t}}</a>
                     </div>
                 </div>
                 <div class="col-lg-6 offset-xl-1">
@@ -70,16 +69,6 @@ assign theContent = Model.ContentItem.Content
     </section>
 
 
-    <!-- About -->
-
-     <section class="container pb-5 mb-md-2 mb-lg-4">
-     <!-- https://stackoverflow.com/questions/67839180/navbar-covering-content-when-i-click-on-a-link-to-navigate-to-different-sections -->
-        <div class="custom-container">
-          <h1 class="border-bottom mt-5 pb-1">{{theContent.About.ContentItems[0].DisplayText}}</h1>
-          <a class="anchor" name="about"></a>
-        </div>
-         <div class="row pt-2 pt-md-3">{{theContent.About.ContentItems[0].HtmlBodyPart.Html | raw}}</div>
-      </section>
 
     <!-- Services -->
     <section class="container mb-5 pb-lg-5 pb-md-4 pb-3 " >
@@ -206,13 +195,14 @@ service | shape_build_display : "Summary" | shape_render
 
     </section>
 
-     <!-- Industries (Slider) -->
+         <!-- Solutions we created (Slider) -->
       <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
-        <h2 class="h1 mb-4 text-center d-lg-none">Industries We Serve</h2>
         <div class="row gy-md-5 gy-4 mb-xl-3">
           <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
-            <h2 class="h1 mb-4 pb-3 pt-2 d-none d-lg-block">Industries We Serve</h2>
-
+            <div class="custom-container">
+                <h2 class="h1 mb-4 pb-3 pt-2 d-none d-lg-block">{{"Solutions We Created" | t}}</h2>
+                <a class="anchor" name="solutions"></a>
+            </div>
             <!-- Swiper slider -->
             <div class="swiper mx-0" data-swiper-options='{
               "spaceBetween": 24,
@@ -237,10 +227,10 @@ service | shape_build_display : "Summary" | shape_render
             <!-- Swiper controls (Prev / next buttons) -->
             <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
               <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
-                <i class="bx bx-chevron-left"></i>
+                <i class="fa-solid fa-chevron-left"></i>
               </button>
               <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
-                <i class="bx bx-chevron-right"></i>
+                <i class="fa-solid fa-chevron-right"></i>
               </button>
             </div>
           </div>
@@ -258,33 +248,22 @@ service | shape_build_display : "Summary" | shape_render
         </div>
       </section>
 
-      <!-- Case studies -->
-      <section class="bg-secondary pt-1">
-        <div class="container">
-          <h2 class="h1 text-center text-md-start mb-lg-4">Case Studies</h2>
-          <div class="row align-items-center pb-5">
-            <div class="col-md-8 col-lg-7 col-xl-6 text-center text-md-start">
-              <p class="fs-lg text-muted mb-md-0">We bring real solutions to each client’s problems through a deep understanding of their market, solution, and vision.</p>
-            </div>
-            <div class="col-md-4 col-lg-5 col-xl-6 d-flex justify-content-center justify-content-md-end">
-              <a href="#" class="btn btn-outline-primary btn-lg">See all case studies</a>
-            </div>
-          </div>
-        </div>
+      {%if Culture.Name == "hr"%}
 
+    <!-- Case studies -->
+      <section class="bg-secondary pt-1" id="vouchers">
+  
         <div class="position-relative py-lg-4 py-xl-5">
 
           <!-- Swiper tabs -->
           <div class="swiper-tabs position-absolute top-0 start-0 w-100 h-100">
-            <div id="image-1" class="parallax position-absolute top-0 start-0 w-100 h-100 swiper-tab active" data-parallax data-speed="0.4">
-              <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-              <div class="parallax-img" style="background-image: url(/media/parallax_images/case-study01.jpg);"></div>
-            </div>
-            <div id="image-2" class="parallax position-absolute top-0 start-0 w-100 h-100 swiper-tab" data-parallax data-speed="0.4">
-              <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
-              <div class="parallax-img" style="background-image: url(/media/parallax_images/case-study02.jpg);"></div>
-            </div>
+            
+            {% for voucher_image in theContent.VoucherImages.ContentItems %}
+            {{voucher_image | shape_build_display : "Summary" | shape_render }}
+            {% endfor %}
           </div>
+
+      
 
           <!-- Swiper slider -->
           <div class="container position-relative zindex-5 py-5">
@@ -294,10 +273,10 @@ service | shape_build_display : "Summary" | shape_render
                 <!-- Slider controls (Prev / next) -->
                 <div class="d-flex justify-content-center justify-content-md-start pb-3 mb-3">
                   <button type="button" id="case-study-prev" class="btn btn-prev btn-icon btn-sm bg-white me-2">
-                    <i class="bx bx-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
                   </button>
                   <button type="button" id="case-study-next" class="btn btn-next btn-icon btn-sm bg-white ms-2">
-                    <i class="bx bx-chevron-right"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
                   </button>
                 </div>
 
@@ -318,24 +297,12 @@ service | shape_build_display : "Summary" | shape_render
                       }
                     }'>
                       <div class="swiper-wrapper">
+                        {% for voucher_text in theContent.VoucherText.ContentItems %}
+                        {{voucher_text | shape_build_display : "Summary" | shape_render }}
+                        {% endfor %}
 
-                        <!-- Item -->
-                        <div class="swiper-slide" data-swiper-tab="#image-1">
-                          <img src="assets/img/landing/software-agency-1/case-study-logo01.png" class="d-block mb-3" width="72" alt="Logo">
-                          <h3 class="mb-2">Cashless payment case study</h3>
-                          <p class="fs-sm text-muted border-bottom pb-3 mb-3">Payment Service Provider Company</p>
-                          <p class="pb-2 pb-lg-3 mb-3">Aenean dolor elit tempus tellus imperdiet. Elementum, ac convallis morbi sit est feugiat ultrices. Cras tortor maecenas pulvinar nec ac justo. Massa sem eget semper...</p>
-                          <a href="#" class="btn btn-primary">View case study</a>
-                        </div>
+                
 
-                        <!-- Item -->
-                        <div class="swiper-slide" data-swiper-tab="#image-2">
-                          <img src="assets/img/landing/software-agency-1/case-study-logo02.png" class="d-block mb-3" width="72" alt="Logo">
-                          <h3 class="mb-2">Smart tech case study</h3>
-                          <p class="fs-sm text-muted border-bottom pb-3 mb-3">Data Analytics Company</p>
-                          <p class="pb-2 pb-lg-3 mb-3">Adipiscing quis a at ligula. Gravida gravida diam rhoncus cursus in. Turpis sagittis tempor gravida phasellus sapien. Faucibus donec consectetur sed id sit nisl.</p>
-                          <a href="#" class="btn btn-primary">View case study</a>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -350,11 +317,27 @@ service | shape_build_display : "Summary" | shape_render
           </div>
         </div>
       </section>
+
+      {%endif%}
+
+      
+    <!-- About -->
+
+     <section class="container pb-5 mb-md-2 mb-lg-4">
+     <!-- https://stackoverflow.com/questions/67839180/navbar-covering-content-when-i-click-on-a-link-to-navigate-to-different-sections -->
+        <div class="custom-container">
+          <h1 class="border-bottom mt-5 pb-1">{{theContent.About.ContentItems[0].DisplayText}}</h1>
+          <a class="anchor" name="about"></a>
+        </div>
+         <div class="row pt-2 pt-md-3">{{theContent.About.ContentItems[0].HtmlBodyPart.Html | raw}}</div>
+      </section>
+
+
+      
 </main>
 
 
 <!-- Back to top button -->
 <a href="#top" class="btn-scroll-top" data-scroll>
-    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
-    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    <i class="btn-scroll-top-icon fa-solid fa-chevron-up"></i>
 </a>

@@ -1,0 +1,10 @@
+﻿<!-- Voucher Image -->
+{% if Model.ContentItem.Content.VoucherImage.Active.Value %}
+<div id="{{Model.ContentItem.Content.VoucherImage.Id.Text}}" class="jarallax position-absolute top-0 start-0 w-100 h-100 swiper-tab active" data-jarallax="" data-speed="0.4">
+{% else %}
+<div id="{{Model.ContentItem.Content.VoucherImage.Id.Text}}" class="jarallax position-absolute top-0 start-0 w-100 h-100 swiper-tab" data-jarallax="" data-speed="0.4">
+{% endif %}
+    <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+    <div class="jarallax-img" style="background-image: url(/media/{{Model.ContentItem.Content.VoucherImage.Media.Paths[0]}});"></div>
+</div>
+

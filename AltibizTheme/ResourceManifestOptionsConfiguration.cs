@@ -43,7 +43,13 @@ namespace OrchardCore.Themes.AltibizTheme
                 .DefineScript("RellaxScript")
                 .SetUrl("~/AltibizTheme/js/rellax.min.js", "~/AltibizTheme/js/rellax.js")
                 .SetVersion("1.0.0");
-            
+
+            _manifest
+                .DefineScript("JarallaxScript")
+                .SetUrl("~/AltibizTheme/js/jarallax.min.js", "~/AltibizTheme/js/jarallax.js")
+                .SetVersion("1.0.0");
+
+
             _manifest
                 .DefineScript("PolyfillsScript")
                 .SetUrl("~/AltibizTheme/js/smooth-scroll.polyfills.min.js", "~/AltibizTheme/js//smooth-scroll.polyfills.js")
@@ -84,8 +90,8 @@ namespace OrchardCore.Themes.AltibizTheme
               .SetVersion("1.0.0");
 
             _manifest
-               .DefineScript("Element-parallax")
-               .SetUrl("~/AltibizTheme/js/components/element-parallax.js")
+               .DefineScript("Element-jarallax")
+               .SetUrl("~/AltibizTheme/js/components/element-jarallax.js")
                .SetVersion("1.0.0");
 
             _manifest
@@ -114,8 +120,8 @@ namespace OrchardCore.Themes.AltibizTheme
               .SetVersion("1.0.0");
 
             _manifest
-              .DefineScript("Parallax")
-              .SetUrl("~/AltibizTheme/js/components/parallax.js")
+              .DefineScript("jarallax")
+              .SetUrl("~/AltibizTheme/js/components/jarallax.js")
               .SetVersion("1.0.0");
 
             _manifest

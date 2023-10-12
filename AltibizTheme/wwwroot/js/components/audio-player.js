@@ -1,9 +1,9 @@
 /**
- * Mouse move parallax effect
- * @requires https://github.com/wagerfield/parallax
+ * Mouse move jarallax effect
+ * @requires https://github.com/wagerfield/jarallax
  */
 
-// Mouse move parallax initialization
+// Mouse move jarallax initialization
 var audioPlayer = function () {
 
     var player = document.querySelectorAll('.audio-player');
