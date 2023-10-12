@@ -40,5 +40,5 @@ msgstr "Naši istaknuti projekti"
 msgid "Show Page"
 msgstr "Prikaži stranicu"
 
-msgid "Solutions We Created"
-msgstr "Rješenja koja smo stvorili"
+msgid "Our products"
+msgstr "Naši proizvodi"
