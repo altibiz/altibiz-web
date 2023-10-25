@@ -23,7 +23,6 @@
 
 	<ItemGroup>
 	  <None Include="wwwroot\css\theme.css" />
-	  <None Include="wwwroot\css\theme.min.css" />
 	</ItemGroup>
 
 	<ItemGroup>
