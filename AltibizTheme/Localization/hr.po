@@ -42,3 +42,6 @@ msgstr "Prikaži stranicu"
 
 msgid "Our products"
 msgstr "Naši proizvodi"
+
+msgid "for"
+msgstr "za"
