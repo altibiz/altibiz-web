@@ -1,16 +1,15 @@
 
 <main class="page-wrapper row">
-    <section class="position-relative d-flex align-items-center py-5 bg-dark overflow-hidden" >
         <div class="container">
             <div class="row">
-            
-                
-            
+                <!-- Page Header -->
+                <!-- Set your background image for this header on the line below. -->
+                {% assign imagePath = Model.ContentItem.Content.BlogPost.Image.Paths.first %}
+                 <img src="/media/{{imagePath}}" class="img-fluid" style="height: 25vh;">
             </div>
         </div>
-    </section>
 
-    <section class="position-relative d-flex align-items-center py-5 bg-dark overflow-hidden" >
+    <section class="position-relative d-flex align-items-center bg-dark overflow-hidden" >
         <div class="container">
             <div class="row">
                 <div class="container position-relative py-4 ">
