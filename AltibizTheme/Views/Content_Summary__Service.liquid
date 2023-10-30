@@ -1,10 +1,17 @@
-﻿<!-- Swiper item -->
-                <div class="swiper-slide h-auto">
-                    <div class="card h-100">
-                    <div class = "mt-3"><i class="fas {{ Model.ContentItem.Content.Service.IconClass.Text}} fa-stack-1x fa-inverse"></i></div>
-                        <div class="card-body mt-3 py-xl-2 py-md-0 py-sm-2 text-center">
-                            <h3 class="h5 mb-3">{{ Model.ContentItem.DisplayText }}</h3>
-                            <p class="mb-0">{{ Model.ContentItem.Content.HtmlBodyPart.Html | raw }}</p>
-                        </div>
-                    </div>
-                </div>
+﻿
+{% assign headerTxt = Model.ContentItem.Content.Service.IconClass.Text %}
+<!-- Swiper item -->
+<div class="swiper-slide h-auto">
+    <div class="card h-100">
+        <div class="card-body mt-3 py-xl-2 py-md-0 py-sm-2 text-center">
+
+            {% if headerTxt contains "/" %}
+              <img class="d-block mb-2 mx-auto" src="{{headerTxt | href }}" >
+            {% else %}
+                <i class="fas {{headerTxt}} fa-inverse"></i>
+            {% endif %}
+            <h3 class="h5 mb-2"> {{Model.ContentItem.DisplayText}}</h3>
+            <p class="mb-0">{{Model.ContentItem.Content.HtmlBodyPart.Html | raw}}</p>
+        </div>
+    </div>
+</div>
