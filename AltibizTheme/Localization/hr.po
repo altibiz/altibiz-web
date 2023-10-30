@@ -16,8 +16,8 @@ msgstr "Trebam web development"
 msgid "I need Microsoft solutions partner"
 msgstr "Trebam partnera za Microsoft rješenja"
 
-msgid "I need MVP"
-msgstr "Trebam MVP"
+msgid "I need Proof of concept"
+msgstr "Trebam 'Proof of concept'"
 
 msgid "I need solutions that power my business"
 msgstr "Trebam rješenja koja pokreću moj posao"

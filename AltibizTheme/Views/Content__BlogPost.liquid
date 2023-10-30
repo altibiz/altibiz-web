@@ -1,0 +1,51 @@
+
+<main class="page-wrapper row">
+    <section class="position-relative d-flex align-items-center py-5 bg-dark overflow-hidden" >
+        <div class="container">
+            <div class="row">
+            
+                
+            
+            </div>
+        </div>
+    </section>
+
+    <section class="position-relative d-flex align-items-center py-5 bg-dark overflow-hidden" >
+        <div class="container">
+            <div class="row">
+                <div class="container position-relative py-4 ">
+                    <div class="row gx-4 gx-lg-5">
+                        <div class="col-md-10 col-lg-8 col-xl-7">
+                            <div class="post-heading">
+                                <h1>{{ Model.ContentItem.DisplayText }}</h1>
+                                <h3 class="subheading">{{ Model.ContentItem.Content.BlogPost.Subtitle.Text }}</h3>
+                                <span class="meta py-3">
+                                    {% assign format = "MMMM dd, yyyy" | t %}
+                                    {% assign dateTime = "DateTime" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}
+                                    {{ "Posted by" | t }} <a href="#">{{ Model.ContentItem.Author }}</a> {{ "on {0}" | t: dateTime | raw }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+    <section class="position-relative d-flex align-items-center py-5 bg-dark overflow-hidden" >
+        <div class="container">
+            <div class="row">
+                {{ Model.Content.ContentsMetadata | shape_render }}
+                {{ Model.Content.MarkdownBodyPart | shape_render }}
+                {{ Model.Content.BlogPost-Category | shape_render }}
+                {{ Model.Content.BlogPost-Tags | shape_render }}
+
+                {% assign recentBlogPosts = Queries.RecentBlogPosts | query %}
+                {% for item in recentBlogPosts %}
+                {{ item | display_text }}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
