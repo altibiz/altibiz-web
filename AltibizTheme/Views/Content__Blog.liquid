@@ -1,0 +1,27 @@
+
+<main class="page-wrapper row">
+        <div class="container">
+    {% assign imagePath = Model.ContentItem.Content.Blog.Image.Paths.first %}
+
+            <div class="row d-flex flex-column justify-content-end content-center" style="height: 25vh; background-image: url('/media/{{ imagePath | href }}')" style="height: 25vh; background-image: url('/media/{{ imagePath | href }}')">
+                <!-- Page Header -->
+                <!-- Set your background image for this header on the line below. -->
+
+                <h2 class="pb-3 text-center">{{Model.ContentItem.DisplayText  }}</h2>            
+
+            </div>
+        </div>
+
+
+
+    <section class="position-relative d-flex align-items-center py-5 bg-dark overflow-hidden">
+        <div class="container">
+            <div class="row">
+                {% shape_remove_item Model.Content "HtmlBodyPart" %}
+                {% shape_remove_item Model.Content "Blog-Image" %}
+
+                {{ Model.Content | shape_render }}
+            </div>
+        </div>
+    </section>
+</main>

@@ -40,5 +40,12 @@ namespace AltibizTheme
 			);
 			return 2;
 		}
-	}
+        public async Task<int> UpdateFrom2()
+        {
+
+            await _recipeMigrator.ExecuteAsync("BlogRecipe.json", this);
+            return 3;
+        }
+
+    }
 }
