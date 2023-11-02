@@ -5,7 +5,7 @@
                 <!-- Page Header -->
                 <!-- Set your background image for this header on the line below. -->
                 {% assign imagePath = Model.ContentItem.Content.BlogPost.Image.Paths.first %}
-                 <img src="/media/{{imagePath}}" class="img-fluid" style="height: 25vh;">
+                 <img src="/media/{{ imagePath | asset_url | resize_url: profile: 'banner', anchor: anchor }}" class="img-fluid" style="height: 25vh;">
             </div>
         </div>
 

@@ -3,7 +3,7 @@
         <div class="container">
     {% assign imagePath = Model.ContentItem.Content.Blog.Image.Paths.first %}
 
-            <div class="row d-flex flex-column justify-content-end content-center" style="height: 25vh; background-image: url('/media/{{ imagePath | href }}')" style="height: 25vh; background-image: url('/media/{{ imagePath | href }}')">
+            <div class="row d-flex flex-column justify-content-end content-center" style="height: 25vh; background-image: url('{{ imagePath | asset_url | resize_url: profile: 'profile800x600', anchor: anchor }}')">
                 <!-- Page Header -->
                 <!-- Set your background image for this header on the line below. -->
 
