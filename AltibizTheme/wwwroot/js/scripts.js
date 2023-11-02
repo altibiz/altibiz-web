@@ -5,7 +5,7 @@
 
 /*!
 * Start Bootstrap - Altibiz v7.0.11 (https://startbootstrap.com/theme/altibiz)
-* Copyright 2013-2022 Start Bootstrap
+* Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-altibiz/blob/master/LICENSE)
 */
 //
