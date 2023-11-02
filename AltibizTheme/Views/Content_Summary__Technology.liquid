@@ -1,7 +1,7 @@
 ﻿<!-- Swiper item -->
 <div class="swiper-slide">
     <div class="mb-3">
-        <img width="70" height="70" src="/media/{{Model.ContentItem.Content.Technology.Logo.Paths[0]}}" alt="Logo" class="d-dark-mode-inline-block d-none">
+        <img width="70" height="70" src="{{Model.ContentItem.Content.Technology.Logo.Paths[0] | asset_url }}" alt="Logo" class="d-dark-mode-inline-block d-none">
     </div>
     <span class="text-body">{{Model.ContentItem.DisplayText}}</span>
 </div>

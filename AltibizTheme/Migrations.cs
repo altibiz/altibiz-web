@@ -42,10 +42,13 @@ namespace AltibizTheme
 		}
         public async Task<int> UpdateFrom2()
         {
-
             await _recipeMigrator.ExecuteAsync("BlogRecipe.json", this);
             return 3;
         }
-
+        public async Task<int> UpdateFrom3()
+        {
+            await _recipeMigrator.ExecuteAsync("MediaProfiles.json", this);
+            return 4;
+        }
     }
 }

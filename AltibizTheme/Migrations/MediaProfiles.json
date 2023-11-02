@@ -1,0 +1,42 @@
+{
+  "name": "",
+  "displayName": "",
+  "description": "",
+  "author": "",
+  "website": "",
+  "version": "",
+  "issetuprecipe": false,
+  "categories": [],
+  "tags": [],
+  "steps": [
+    {
+      "name": "MediaProfiles",
+      "MediaProfiles": {
+        "profile800x600": {
+          "Hint": "A 4:3 ratio (800px x 600px, cropped)",
+          "Width": 800,
+          "Height": 600,
+          "Mode": 2,
+          "Format": 0,
+          "Quality": 100
+        },
+        "profile1200x900": {
+          "Hint": "A 4:3 ratio (1200px x 900px, cropped)",
+          "Width": 1200,
+          "Height": 900,
+          "Mode": 2,
+          "Format": 0,
+          "Quality": 100
+        },
+        "profile1200x800": {
+          "Hint": "A 3:2 ratio (1200px x 800px, cropped)",
+          "Width": 1200,
+          "Height": 900,
+          "Mode": 2,
+          "Format": 0,
+          "Quality": 100
+        }
+      }
+    }
+  ]
+}
