@@ -12,12 +12,13 @@
                 <a style="text-decoration:none" href="mailto:mail@altibiz.com" class="fw-medium">mail@altibiz.com</a>
             </div>
         </div>
-        <p class="nav d-block fs-xs text-center text-md-start mt-3">
-            <span>Copyright © Altibiz</span>
+        <p id="currentYear" class="nav d-block fs-xs text-center text-md-start mt-3">
              <!-- This script automatically adds the current year to your website footer-->
                 <!-- (credit: https://updateyourfooter.com/)-->
                 <script>
-                    document.write(new Date().getFullYear());
+                const year = new Date().getFullYear();
+                const text = "Copyright © Altibiz " + year;
+                document.getElementById("currentYear").textContent = text;
                 </script>
         </p>
     </div>
