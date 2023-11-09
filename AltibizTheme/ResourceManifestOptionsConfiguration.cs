@@ -184,6 +184,10 @@ namespace OrchardCore.Themes.AltibizTheme
               .SetUrl("~/AltibizTheme/js/components/video-button.js")
               .SetVersion("1.0.0");
 
+            _manifest
+                .DefineScript("CustomJs")
+                .SetUrl("~/AltibizTheme/js/custom.js")
+                .SetVersion("1.0.0");
         }
 
         public void Configure(ResourceManagementOptions options)
