@@ -6,7 +6,7 @@
         <div class="card-body mt-3 py-xl-2 py-md-0 py-sm-2 text-center">
 
             {% if headerTxt contains "/" %}
-              <img class="d-block mb-2 mx-auto" src="{{headerTxt | href }}" >
+              <img class="d-block mb-2 mx-auto" src="{{headerTxt | href }}" alt="Image">
             {% else %}
                 <i class="fas {{headerTxt}} fa-inverse"></i>
             {% endif %}
