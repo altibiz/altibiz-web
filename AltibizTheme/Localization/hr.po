@@ -42,3 +42,11 @@ msgstr "Prikaži stranicu"
 
 msgid "Our products"
 msgstr "Naši proizvodi"
+
+msgid "Read more"
+msgstr "Više"
+
+msgid "Read less"
+msgstr "Sakrij"
+
+

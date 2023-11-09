@@ -17,7 +17,6 @@
                     expandedContent.classList.add("showFullBox");
                     buttonsContent.classList.add("showFullBox");
                     expandedContent.style.height = contentHeight.clientHeight+"px";
-                    console.log(contentHeight.clientHeight);
                 }
             }
         });
