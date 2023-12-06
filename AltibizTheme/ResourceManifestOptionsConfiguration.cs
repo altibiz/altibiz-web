@@ -70,6 +70,11 @@ namespace OrchardCore.Themes.AltibizTheme
                 .SetUrl("~/AltibizTheme/css/boxicons.min.css", "~/AltibizTheme/css/boxicons.css")
                 .SetVersion("7.0.10");
 
+            _manifest
+                .DefineStyle("CustomCSS")
+                .SetUrl("~/AltibizTheme/css/custom.css")
+                .SetVersion("1.0.0");
+
             //jQuery
 
             _manifest
@@ -188,6 +193,8 @@ namespace OrchardCore.Themes.AltibizTheme
                 .DefineScript("CustomJs")
                 .SetUrl("~/AltibizTheme/js/custom.js")
                 .SetVersion("1.0.0");
+
+
         }
 
         public void Configure(ResourceManagementOptions options)
