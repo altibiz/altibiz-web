@@ -45,3 +45,9 @@ msgstr "Naši proizvodi"
 
 msgid "for"
 msgstr "za"
+
+msgid "Read more"
+msgstr "Više"
+
+msgid "Read less"
+msgstr "Sakrij"

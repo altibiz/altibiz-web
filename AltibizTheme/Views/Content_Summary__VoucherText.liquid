@@ -1,8 +1,46 @@
 ﻿<div class="swiper-slide" data-swiper-tab="{{Model.ContentItem.Content.VoucherText.IdLink.Text}}">
-                          <img src="assets/img/landing/software-agency-1/case-study-logo02.png" class="d-block mb-3" width="72" alt="Logo">
-                          <h3 class="mb-5">{{Model.ContentItem.Content.TitlePart.Title}}</h3>
-                          <div class="pb-2 pb-lg-3 mb-3">
-                              {{Model.ContentItem.Content.HtmlBodyPart.Html | raw}}
-                          </div>
+
+    <h3 class="mb-5">{{Model.ContentItem.Content.TitlePart.Title}}</h3>
+
+    <div class="pb-2 pb-lg-3">
+        <div class="content-box "  id="expandedContent" >
+            <div class="contentHeight">
+                {{Model.ContentItem.Content.HtmlBodyPart.Html | raw}}
+            </div>
+        </div>
+
+        <div class="buttonsContent">
+            <a href="javascript:void(0);" class="btn btn-link read-more-button " data-toggle="collapse" data-target="#expandedContent">
+                {{"Read more" | t}}
+            </a>
+            <a href="javascript:void(0);" class="btn btn-link read-less-button" data-toggle="collapse" data-target="#expandedContent">
+                {{"Read less" | t}}
+            </a>
+        </div>
+    </div>
 </div>
-                    
+<style>
+
+    #expandedContent {
+        overflow: hidden;
+        height: 256px;
+        transition: height 1s ease; 
+    }
+
+    .read-more-button{
+        padding-top: 1rem;
+        display: block;
+    }
+    .read-less-button{
+        display: none;
+    }
+    .showFullBox .read-less-button
+    {
+        padding-top: 1rem;
+        display: block;
+    }
+    .showFullBox .read-more-button{
+        display: none;
+    }
+
+</style>
