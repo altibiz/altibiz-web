@@ -206,30 +206,16 @@
 </head>
 
 <html class="dark-mode" lang="{{ Culture.Name }}">
+    <body>
+        {% render_section "Header", required: false %}
 
-<body>
-
-    
-   
-    {% render_section "Header", required: false %}
-
-    {% assign dynamic_cache = Culture.Name | append: "-main-menu" %}
-    {% assign dynamic_cache_tag = "alias:" | append: dynamic_cache %}
-	{% assign dynamic_alias = "alias:" | append: dynamic_cache %}
-    {% shape "menu", alias: dynamic_alias, cache_id: dynamic_cache, cache_expires_after: "00:00:01", cache_tag: dynamic_cache_tag %}
-
-	{% render_section "Messages", required: false %}
-    {% render_section "Content" %}
-    {%comment%}
-    {% render_section "Footer" %}
-    {%endcomment%}
-    {{Model.Footer | shape_render}}
-    {% resources type: "FootScript" %}
-
-
-    
-
-</body>
+	    {% render_section "Messages", required: false %}
+        {% render_section "Content" %}
+        {%comment%}
+        {% render_section "Footer" %}
+        {%endcomment%}
+        {{Model.Footer | shape_render}}
+        {% resources type: "FootScript" %}
+    </body>
 </html>
 
-{{Model.Footer | console_log}}
