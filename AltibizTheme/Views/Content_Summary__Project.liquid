@@ -10,7 +10,7 @@
               <h4 class="mb-lg-4 mb-3 fs-base fw-normal text-body">{{Model.ContentItem.Content.Project.Category.Text}}</h4>
               <h3 class=" mb-lg-2">{{Model.ContentItem.DisplayText}}</h3>
               {%if Model.ContentItem.Content.Project.ClientWebsiteLink.Url != ""%}
-              <i class="mb-lg-4 mb-3 fs-base fw-normal text-body">by<a target="_blank" style="text-decoration:none" href="{{Model.ContentItem.Content.Project.ClientWebsiteLink.Url}}">{{Model.ContentItem.Content.Project.ClientWebsiteLink.Text}}</a> </i> 
+              <i class="mb-lg-4 mb-3 fs-base fw-normal text-body">{{"for" | t}}<a target="_blank" style="text-decoration:none" href="{{Model.ContentItem.Content.Project.ClientWebsiteLink.Url}}">{{Model.ContentItem.Content.Project.ClientWebsiteLink.Text}}</a> </i> 
               {%endif%}
               <p class="mb-lg-4 mb-3">{{ Model.ContentItem.Content.HtmlBodyPart.Html | raw }}</p>
               
@@ -27,7 +27,6 @@
                     </li>
                   {%endfor%}
               </ul>
-
               
               {% if Model.ContentItem.Content.Project.LinkToProject.Url != "" %}
               <a href="{{Model.ContentItem.Content.Project.LinkToProject.Url}}" target="_blank" class="mt- btn btn-lg btn-outline-primary">{{"Show Page" | t}}</a>
