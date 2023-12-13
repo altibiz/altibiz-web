@@ -1,0 +1,172 @@
+{
+  "name": "",
+  "displayName": "",
+  "description": "",
+  "author": "",
+  "website": "",
+  "version": "",
+  "issetuprecipe": false,
+  "categories": [],
+  "tags": [],
+  "steps": [
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "Header",
+          "DisplayName": "Header",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Stereotype": "Widget"
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Header",
+              "Name": "Header",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "LocalizationPart",
+              "Name": "LocalizationPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "Header",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "Menu",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Menu",
+                  "Position": "0"
+                },
+                "ContentPickerFieldSettings": {
+                  "DisplayedContentTypes": [
+                    "Menu"
+                  ],
+                  "DisplayedStereotypes": []
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Layers",
+      "Layers": [
+        {
+          "Name": "All HR But Blog",
+          "Rule": null,
+          "Description": null,
+          "LayerRule": {
+            "Conditions": [
+              {
+                "$type": "OrchardCore.Rules.Models.CultureCondition, OrchardCore.Rules",
+                "Value": "HR",
+                "Operation": {
+                  "$type": "OrchardCore.Rules.Models.StringEqualsOperator, OrchardCore.Rules",
+                  "CaseSensitive": false
+                },
+                "Name": "CultureCondition",
+                "ConditionId": "4p380nez79maywmfvz26ftbpm2"
+              },
+              {
+                "$type": "OrchardCore.Rules.Models.UrlCondition, OrchardCore.Rules",
+                "Value": "/blog",
+                "Operation": {
+                  "$type": "OrchardCore.Rules.Models.StringNotStartsWithOperator, OrchardCore.Rules",
+                  "CaseSensitive": false
+                },
+                "Name": "UrlCondition",
+                "ConditionId": "4bkh0zq22390m3h0dhd4375vmx"
+              }
+            ],
+            "Name": null,
+            "ConditionId": "4j93spz8k46zxs1vbv1vdx35xt"
+          }
+        },
+        {
+          "Name": "All EN but Blog",
+          "Rule": null,
+          "Description": null,
+          "LayerRule": {
+            "Conditions": [
+              {
+                "$type": "OrchardCore.Rules.Models.CultureCondition, OrchardCore.Rules",
+                "Value": "EN",
+                "Operation": {
+                  "$type": "OrchardCore.Rules.Models.StringEqualsOperator, OrchardCore.Rules",
+                  "CaseSensitive": false
+                },
+                "Name": "CultureCondition",
+                "ConditionId": "4c3cgvdascfbk3cjx18ssts9nc"
+              },
+              {
+                "$type": "OrchardCore.Rules.Models.UrlCondition, OrchardCore.Rules",
+                "Value": "/blog",
+                "Operation": {
+                  "$type": "OrchardCore.Rules.Models.StringNotStartsWithOperator, OrchardCore.Rules",
+                  "CaseSensitive": false
+                },
+                "Name": "UrlCondition",
+                "ConditionId": "4d0rg5pnaqnr01pg6ax7083h5x"
+              }
+            ],
+            "Name": null,
+            "ConditionId": "4s5358d751hzazg9m1spxh1xmj"
+          }
+        },
+        {
+          "Name": "Blog only ",
+          "Rule": null,
+          "Description": null,
+          "LayerRule": {
+            "Conditions": [
+              {
+                "$type": "OrchardCore.Rules.Models.UrlCondition, OrchardCore.Rules",
+                "Value": "/blog",
+                "Operation": {
+                  "$type": "OrchardCore.Rules.Models.StringStartsWithOperator, OrchardCore.Rules",
+                  "CaseSensitive": false
+                },
+                "Name": "UrlCondition",
+                "ConditionId": "49eses0hkda1w6qefnbb3tmrx6"
+              }
+            ],
+            "Name": null,
+            "ConditionId": "4p93cn9x6dtja3z02cbzv0t3nj"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "LayerSettings": {
+        "Zones": [
+          "Footer",
+          "Header"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+
+{% assign contentItem = Model.ContentItem.Content %}
+
+{% assign menuContent = Content.ContentItemId[contentItem.Header.Menu.ContentItemIds] %}
+{% assign mnuAlias = menuContent.Content.AliasPart.Alias %}
+
+{% assign dynamic_cache = mnuAlias %}
+
+{% assign dynamic_cache_tag = "alias:" | append: dynamic_cache %}
+{% assign dynamic_alias = "alias:" | append: dynamic_cache %}
+
+<header class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky">
+    <div class="container px-3">
+        <a class="navbar-brand pe-3" href="{{ '~/' | href }}"><img src="/media/altibiz-logo/Alti_logo.png" width="200" height="300" alt="Company logo"> </a>
+
+                {% shape "menu", alias: dynamic_alias, cache_id: dynamic_cache, cache_expires_after: "00:00:01", cache_tag: dynamic_cache_tag %}
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <span class="d-none d-lg-inline-flex">
+        {% shape "ContentCulturePicker" %}
+		</span>
+        
+    </div>
+
+</header>
