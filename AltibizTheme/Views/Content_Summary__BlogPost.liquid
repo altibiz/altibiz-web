@@ -1,0 +1,26 @@
+﻿<!-- Item -->
+<div class="col pb-3">
+    <article class="card  shadow-sm h-100">
+        <div class="position-relative">
+            <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+            <img src="{{Model.ContentItem.Content.BlogPost.Image.Paths[0] | asset_url | resize_url: profile : 'medium'}}" class="card-img-top" alt="Cover image for blog post">
+        </div>
+        <div class="card-body pb-4">
+            <div class="d-flex align-items-center fw-bold justify-content-between mb-3">
+                <span class="fs-sm text-muted">{{Model.ContentItem.PublishedUtc | date: "%B %d, %Y"}}</span>
+            </div>
+            <h3 class="h5 mb-0">
+                <a href="blog-single.html">{{Model.ContentItem.DisplayText}}</a>
+            </h3>
+        </div>
+        <div class="card-footer py-4">
+            <a href="#" class="d-flex align-items-center  text-dark text-decoration-none">
+                <span>posted by <i>{{Model.ContentItem.Author}}</i></span>
+            </a>
+        </div>
+    </article>
+</div>
+
+
+
+          

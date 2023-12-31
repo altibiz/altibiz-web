@@ -1,0 +1,14 @@
+﻿{% if Model.ContentItems != null and Model.ContentItems.size > 0 %}
+    
+    <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 gy-md-4 gy-2">
+        {% for item in Model.ContentItems %}
+            {{ item | shape_build_display: "Summary" | shape_render }}
+        {% endfor %}
+    </div>
+
+{% else %}
+
+    <p class="alert alert-warning">{{"There are no such results." | t }}</p>
+
+{% endif %}
+
