@@ -1,29 +1,23 @@
 
-<main class="page-wrapper row">
-        <div class="container">
-    {% assign imagePath = Model.ContentItem.Content.Blog.Image.Paths.first %}
+<main class="page-wrapper ">
 
-            <div class="row d-flex flex-column justify-content-end content-center" style="height: 25vh; background-image: url('{{ imagePath | asset_url | resize_url: profile: 'profile800x600', anchor: anchor }}')">
+        <div class="container">
+            {% assign imagePath = Model.ContentItem.Content.Blog.Image.Paths.first %}
+
+            <div class="row d-flex flex-column justify-content-end content-center" style="height: 10vh; background-image: url('{{ imagePath | asset_url | resize_url: profile: 'profile800x600', anchor: anchor }}')">
                 <!-- Page Header -->
                 <!-- Set your background image for this header on the line below. -->
 
-                <h2 class="pb-3 text-center">{{Model.ContentItem.DisplayText  }}</h2>            
+                    
 
             </div>
         </div>
-
-
-
-    
-    <section class="position-relative d-flex align-items-center py-5 bg-dark overflow-hidden">
-        <div class="container">
-            <div class="row">
-                {% shape_remove_item Model.Content "HtmlBodyPart" %}
-                {% shape_remove_item Model.Content "Blog-Image" %}
-                {% shape_remove_item Model.Content "ContentsMetadata" %}
-                {{Model.Content | shape_render}}
-            </div>
-        </div>
-    </section>
+        
+       
+        {% shape_remove_item Model.Content "HtmlBodyPart" %}
+        {% shape_remove_item Model.Content "Blog-Image" %}
+        {% shape_remove_item Model.Content "ContentsMetadata" %}
+        {{Model.Content | shape_render}}
+        
 </main>
 
