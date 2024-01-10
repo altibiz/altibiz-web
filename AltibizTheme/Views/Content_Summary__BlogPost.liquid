@@ -13,7 +13,7 @@
                <p>{{Model.ContentItem.Content.BlogPost.BlogSummary.Text }}</p>
                 <hr class="my-4">
                 <div class="d-flex align-items-center justify-content-between">
-                    <span class="fs-sm text-muted">{{Model.ContentItem.PublishedUtc | date: "%B %d, %Y"}}</span>
+                    <span class="fs-sm text-muted">{{Model.ContentItem.CreatedUtc | date: "%B %d, %Y"}}</span>
                     <span>posted by <i>{{Model.ContentItem.Author}}</i></span>
                 </div>
             </div>
