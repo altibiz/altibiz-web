@@ -55,5 +55,10 @@ namespace AltibizTheme
             await _recipeMigrator.ExecuteAsync("HeaderWidget.json", this);
             return 5;
         }
+		public async Task<int> UpdateFrom5()
+		{
+            await _recipeMigrator.ExecuteAsync("BlogPost-update.json", this);
+            return 6;
+        }	
     }
 }
