@@ -1,12 +1,12 @@
 
-<section class="position-relative d-flex align-items-center bg-dark overflow-hidden pt-5" style="height:30vh;">
+<section class="position-relative d-flex align-items-center bg-dark overflow-hidden pt-5" ">
                 <div class="container pt-4 mt-lg-3 "> 
                     <div class="row gx-4 gx-lg-5">  
                         <div class="col-md-10 col-lg-8 col-xl-7">
-                            <div class="post-heading">
+                            <div class="post-heading mb-3">
                                 <h1>{{ Model.ContentItem.DisplayText }}</h1>
                                 <h3 class="subheading">{{ Model.ContentItem.Content.BlogPost.Subtitle.Text }}</h3>
-                                <span class="meta py-3">
+                                <span class="meta py-3 ">
                                     {% assign format = "MMMM dd, yyyy" | t %}
                                     {% assign dateTime = "DateTime" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}
                                     {{ "Posted by" | t }} <i>{{Model.ContentItem.Author}}</i> {{ "on {0}" | t: dateTime | raw }}
