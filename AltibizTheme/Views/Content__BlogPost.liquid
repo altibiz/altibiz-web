@@ -7,9 +7,7 @@
                                 <h1>{{ Model.ContentItem.DisplayText }}</h1>
                                 <h3 class="subheading">{{ Model.ContentItem.Content.BlogPost.Subtitle.Text }}</h3>
                                 <span class="meta py-3 ">
-                                    {% assign format = "MMMM dd, yyyy" | t %}
-                                    {% assign dateTime = "DateTime" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}
-                                    {{ "Posted by" | t }} <i>{{Model.ContentItem.Author}}</i> {{ "on {0}" | t: dateTime | raw }}
+                                    <i> {{ "Posted by" | t }} {{Model.ContentItem.Author}} {{"on" | t}} {{Model.ContentItem.CreatedUtc | date: "%d.%m.%Y"}}</i>
                                 </span>
                             </div>
                         </div>
