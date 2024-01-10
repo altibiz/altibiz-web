@@ -1,0 +1,34 @@
+{
+  "name": "",
+  "displayName": "",
+  "description": "",
+  "author": "",
+  "website": "",
+  "version": "",
+  "issetuprecipe": false,
+  "categories": [],
+  "tags": [],
+  "steps": [
+    {
+      "name": "ContentDefinition",
+      "ContentParts": [
+        {
+          "Name": "BlogPost",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "BlogSummary",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "BlogSummary",
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
