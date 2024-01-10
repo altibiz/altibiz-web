@@ -1,19 +1,7 @@
 
-<main class="page-wrapper row">
-        <div class="container">
-            <div class="row">
-                <!-- Page Header -->
-                <!-- Set your background image for this header on the line below. -->
-                {% assign imagePath = Model.ContentItem.Content.BlogPost.Image.Paths.first %}
-                 <img src="/media/{{ imagePath | asset_url | resize_url: profile: 'banner', anchor: anchor }}" class="img-fluid" style="height: 25vh;">
-            </div>
-        </div>
-
-    <section class="position-relative d-flex align-items-center bg-dark overflow-hidden" >
-        <div class="container">
-            <div class="row">
-                <div class="container position-relative py-4 ">
-                    <div class="row gx-4 gx-lg-5">
+<section class="position-relative d-flex align-items-center bg-dark overflow-hidden pt-5" style="height:30vh;">
+                <div class="container pt-4 mt-lg-3 "> 
+                    <div class="row gx-4 gx-lg-5">  
                         <div class="col-md-10 col-lg-8 col-xl-7">
                             <div class="post-heading">
                                 <h1>{{ Model.ContentItem.DisplayText }}</h1>
@@ -21,20 +9,23 @@
                                 <span class="meta py-3">
                                     {% assign format = "MMMM dd, yyyy" | t %}
                                     {% assign dateTime = "DateTime" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}
-                                    {{ "Posted by" | t }} <a href="#">{{ Model.ContentItem.Author }}</a> {{ "on {0}" | t: dateTime | raw }}
+                                    {{ "Posted by" | t }} <i>{{Model.ContentItem.Author}}</i> {{ "on {0}" | t: dateTime | raw }}
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <hr>
-            </div>
-        </div>
     </section>
 
-    <section class="position-relative d-flex align-items-center py-5 bg-dark overflow-hidden" >
+    <section class="position-relative d-flex align-items-center py-1 bg-dark overflow-hidden" >
         <div class="container">
+            
             <div class="row">
+                {%comment%}
+                {% assign imagePath = Model.ContentItem.Content.BlogPost.Image.Paths.first %}
+                <img src="{{ imagePath | asset_url | resize_url: profile: 'large', anchor: anchor }}" class="img-fluid pb-5" style="height: 25vh;">
+                {%endcomment%}
+                
                 {{ Model.Content.ContentsMetadata | shape_render }}
                 {{ Model.Content.MarkdownBodyPart | shape_render }}
                 {{ Model.Content.BlogPost-Category | shape_render }}
@@ -47,4 +38,5 @@
             </div>
         </div>
     </section>
-</main>
+
+{{Model.ContentItem.Content.BlogPost.Image.Paths[0] | console_log}}

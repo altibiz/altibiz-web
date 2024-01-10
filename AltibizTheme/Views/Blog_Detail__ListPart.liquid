@@ -1,0 +1,18 @@
+﻿{% if Model.ContentItems != null and Model.ContentItems.size > 0 %}
+    <section class="container mt-4 mb-lg-5 pt-lg-2 pb-5">
+    <div class="row align-items-end gy-3 mb-4 pb-lg-3 pb-1">
+          <div class="col-lg-5 col-md-4">
+            <h1 class="mb-2 mb-md-0">Blog</h1>
+          </div>
+    </div>
+    {% for item in Model.ContentItems %}
+            {{ item | shape_build_display: "Summary" | shape_render }}
+    {% endfor %}
+</section>
+
+{% else %}
+
+    <p class="alert alert-warning">{{"There are no such results." | t }}</p>
+
+{% endif %}
+

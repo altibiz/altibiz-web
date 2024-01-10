@@ -208,7 +208,9 @@
 <html class="dark-mode" lang="{{ Culture.Name }}">
 
 <body>
+    
 
+<main class="page-wrapper row">
 
     {% assign dynamic_cache = Culture.Name | append: "-main-menu" %}
 
@@ -224,7 +226,7 @@
     {%endcomment%}
     {{Model.Footer | shape_render}}
     {% resources type: "FootScript" %}
-
+</main>
 
     
 

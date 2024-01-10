@@ -1,0 +1,22 @@
+﻿<!-- Blog Post Summary -->
+
+<article class="card border-0 shadow-sm overflow-hidden mb-4">
+    <div class="row g-0">
+        <div class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url({{Model.ContentItem.Content.BlogPost.Image.Paths[0] | asset_url | resize_url: profile : 'medium'}}); min-height: 18rem;">
+            <a href="{{Model.ContentItem.Content.AutoroutePart.Path}}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+        </div>
+        <div class="col-sm-8">
+            <div class="card-body">
+                <h3 class="h4">
+                   <a href="{{Model.ContentItem.Content.AutoroutePart.Path}}">{{Model.ContentItem.DisplayText}}</a>
+                </h3>
+               <p>{{Model.ContentItem.Content.BlogPost.BlogSummary.Text }}</p>
+                <hr class="my-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="fs-sm text-muted">{{Model.ContentItem.CreatedUtc | date: "%d.%m.%Y"}}</span>
+                    <span>posted by <i>{{Model.ContentItem.Author}}</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
