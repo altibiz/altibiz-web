@@ -87,6 +87,7 @@ assign theContent = Model.ContentItem.Content
                         </div>
                     </div>-->
                 </div>
+				</div>
 			</div>
         </div>
     </section>
@@ -208,7 +209,8 @@ service | shape_build_display : "Summary" | shape_render
     <!-- Portfolio -->
     <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
         <div class="custom-container">
-             <h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">{{"Our Featured Projects" | t}}</h2>
+			<!--<h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">{{"Our Featured Projects" | t}}</h2>-->
+			<h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">{{"Our Featured Orchard Core Projects" | t}}</h2>
              <a class="anchor" name="portfolio"></a>
         </div>
 
@@ -274,7 +276,7 @@ service | shape_build_display : "Summary" | shape_render
       {%if Culture.Name == "hr"%}
 
     <!-- Vouchers -->
-      <section class="bg-secondary pt-1">
+      <!--<section class="bg-secondary pt-1">
 
         <div class="container">
             <div class = "custom-container">
@@ -283,7 +285,7 @@ service | shape_build_display : "Summary" | shape_render
             </div>
             <div class="row align-items-center pb-3">
             <div class="col-md-8 col-lg-7 col-xl-6 text-center text-md-start">
-            <!-- TODO: dodaj pravi opis -->
+            --><!-- TODO: dodaj pravi opis --><!--
               <p class="fs-lg text-muted mb-md-0">Područja djelovanja po vaučerima za digitalizaciju</p>
             </div>
             <div class="col-md-4 col-lg-5 col-xl-6 d-flex mb-5 justify-content-center justify-content-md-end">
@@ -294,7 +296,7 @@ service | shape_build_display : "Summary" | shape_render
   
         <div class="position-relative py-lg-4 py-xl-5">
 
-          <!-- Swiper tabs -->
+          --><!-- Swiper tabs --><!--
           <div class="swiper-tabs position-absolute top-0 start-0 w-100 h-100">
             
             {% for voucher_image in theContent.VoucherImages.ContentItems %}
@@ -304,12 +306,12 @@ service | shape_build_display : "Summary" | shape_render
 
       
 
-          <!-- Swiper slider -->
+          --><!-- Swiper slider --><!--
           <div class="container position-relative zindex-5 py-5">
             <div class="row py-2 py-md-3">
               <div class="col-xl-5 col-lg-7 col-md-9">
 
-                <!-- Slider controls (Prev / next) -->
+                --><!-- Slider controls (Prev / next) --><!--
                 <div class="d-flex justify-content-center justify-content-md-start pb-3 mb-3">
                   <button type="button" id="case-study-prev" class="btn btn-prev btn-icon btn-sm bg-white me-2">
                     <i class="fa-solid fa-chevron-left"></i>
@@ -319,7 +321,7 @@ service | shape_build_display : "Summary" | shape_render
                   </button>
                 </div>
 
-                <!-- Card -->
+                --><!-- Card --><!--
                 <div class="card bg-white shadow-sm p-3">
                   <div class="card-body">
                     <div class="swiper" data-swiper-options='{
@@ -347,7 +349,7 @@ service | shape_build_display : "Summary" | shape_render
                   </div>
                 </div>
 
-                <!-- Pagination (bullets) -->
+                --><!-- Pagination (bullets) --><!--
                 <div class="dark-mode pt-4 mt-3">
                   <div id="case-study-pagination" class="swiper-pagination position-relative bottom-0"></div>
                 </div>
@@ -357,7 +359,7 @@ service | shape_build_display : "Summary" | shape_render
         </div>
       </section>
 
-      {%endif%}
+      {%endif%}-->
 
       
     <!-- About -->
