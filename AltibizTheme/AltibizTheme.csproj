@@ -46,4 +46,10 @@
 	  <Folder Include="Assets\dist\css\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <EmbeddedResource Update="Views\Content-OrchardCorePage.liquid">
+	    <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+	  </EmbeddedResource>
+	</ItemGroup>
+
 </Project>

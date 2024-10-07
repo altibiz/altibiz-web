@@ -1,0 +1,246 @@
+﻿
+
+ <!-- Page loading spinner -->
+<div class="page-loading active">
+    <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+</div>
+{%
+assign theContent = Model.ContentItem.Content
+%}
+
+<main class="page-wrapper">
+
+    <section class="position-relative d-flex align-items-center min-vh-100 py-5 bg-dark overflow-hidden">
+        <span class="position-absolute top-0 start-0 d-dark-mode-block d-none w-100 h-100 bg-secondary opacity-75"></span>
+        <div class="container position-relative dark-mode mt-5 mb-lg-5 mb-md-4 mb-3 pt-3 pb-xl-3">
+            <div class="row gy-5">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="position-relative zindex-5 text-lg-start text-center">
+                        <h1 class="display-2 mb-0 pb-lg-3 pb-md-2">{{"Coding the" | t}}<span class="text-primary">{{" future" | t}}</span>{{" of business" | t}}</h1>
+                        <p>
+                            <h5 class="text-light">{{"Intelligent business solutions for a " | t}}<i>"big data"</i><span class=" text-light">{{" world" | t}}</span></h5>
+                        </p>         
+                         <a href="mailto:mail@altibiz.com" class=" mt-3 btn btn-lg btn-primary">{{"Contact us" | t}}</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-xl-1">
+					<div class="container mt-5">
+						<div class="container mt-5">
+							<h2 class="mb-4 fs-1">Zašto odabrati Altibiz za Orchard Core razvoj?</h2>
+
+							<ul class="list-unstyled fs-5">
+								<li class="mb-4">
+									<strong>Prilagođena Orcahrd Core rješenja:</strong> Izrađujemo fleksibilne i skalabilne sustave prilagođene vašim jedinstvenim poslovnim potrebama.
+								</li>
+								<li class="mb-4">
+									<strong>Iskusni stručnjaci:</strong> Naš tim iskusnih Orchard Core programera vodi vas kroz svaki korak procesa.
+								</li>
+								<li class="mb-4">
+									<strong>Sveobuhvatne usluge:</strong> Pružamo potpuni spektar usluga od dizajna i razvoja do implementacije i održavanja.
+								</li>
+								<li class="mb-4">
+									<strong>Fokus na klijenta:</strong> Vaši poslovni ciljevi i potrebe su u središtu naših rješenja.
+								</li>
+								<li class="mb-4">
+									<strong>Transparentnost i suradnja:</strong> Osiguravamo otvorenu komunikaciju i pravovremenu isporuku za vaše potpuno zadovoljstvo.
+								</li>
+							</ul>
+						</div>
+                    </div>
+				</div>
+			</div>
+        </div>
+    </section>
+
+
+
+    <!-- Services -->
+    <section class="container mb-5 pb-lg-5 pb-md-4 pb-3 " >
+        <div class=" mt-5 custom-container">
+            <h2 class="h1 mt-5 mb-lg-5  mb-4 pb-lg-0 pb-md-2 text-center">{{"Сustom Software Solutions" | t}}</h2>
+            <a class="anchor" name="services"></a>
+        </div>
+        <!-- Swiper slider -->
+        <div class="swiper mb-xl-3" data-swiper-options='{
+          "spaceBetween": 24,
+          "breakpoints": {
+            "0": {
+              "slidesPerView": 1
+            },
+            "500": {
+              "slidesPerView": 2
+            },
+            "768": {
+              "slidesPerView": 3
+            },
+            "1200": {
+              "slidesPerView": 4
+            }
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          }
+        }'>
+            <div class="swiper-wrapper">
+                {% for service in theContent.Services.ContentItems %}
+                {{
+service | shape_build_display : "Summary" | shape_render
+                }}
+                {% endfor %}
+            </div>
+
+            <!-- Swiper pagination -->
+            <div class="swiper-pagination position-static mt-4 pt-lg-3 pt-2"></div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
+
+        <!-- Swiper slider -->
+        <div class="swiper mb-xl-3 text-center" data-swiper-options='{
+          "spaceBetween": 24,
+          "autoplay": true,
+          "breakpoints": {
+            "0": {
+              "slidesPerView": 2
+            },
+            "500": {
+              "slidesPerView": 3
+            },
+            "768": {
+              "slidesPerView": 4
+            },
+            "1200": {
+              "slidesPerView": 6
+            }
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          }
+        }'>
+            <div class="swiper-wrapper">
+                {% for technology in theContent.Technologies.ContentItems %}
+                {{technology | shape_build_display : "Summary" | shape_render }}
+                {% endfor %}
+            </div>
+
+            <!-- Swiper pagination -->
+            <div class="swiper-pagination position-static mt-4 pt-lg-3 pt-2"></div>
+        </div>
+    </section>
+
+    
+
+    <!-- Clients (carousel on screens < 1100px) -->
+    <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
+        <div class="swiper mx-n2" data-swiper-options='{
+          "spaceBetween": 8,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "0": {
+              "slidesPerView": 2
+            },
+            "768": {
+              "slidesPerView": 3
+            },
+            "1200": {
+              "slidesPerView": 4
+            }
+          }
+        }'>
+            <div class="swiper-wrapper">
+                {% for milestone in theContent.Clients.ContentItems %}
+                {{milestone | shape_build_display : "Summary" | shape_render }}
+                {% endfor %}
+            </div>
+
+            <!-- Pagination (bullets) -->
+            <div class="swiper-pagination position-relative pt-2 mt-4"></div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio -->
+    <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
+        <div class="custom-container">
+			<!--<h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">{{"Our Featured Projects" | t}}</h2>-->
+			<h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">{{"Our Featured Orchard Core Projects" | t}}</h2>
+             <a class="anchor" name="portfolio"></a>
+        </div>
+
+        {% for project in theContent.Portfolio.ContentItems %}
+        {{project | shape_build_display : "Summary" | shape_render }}
+        {% endfor %}
+
+    </section>
+
+         <!-- Solutions we created (Slider) -->
+      <section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
+        <div class="row gy-md-5 gy-4 mb-xl-3">
+          <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+            <div class="custom-container">
+                <h2 class="h1 mb-4 pb-3 pt-2 d-none d-lg-block">{{"Our products" | t}}</h2>
+                <a class="anchor" name="solutions"></a>
+            </div>
+            <!-- Swiper slider -->
+            <div class="swiper mx-0" data-swiper-options='{
+              "spaceBetween": 24,
+              "loop": true,
+              "tabs": true,
+              "autoHeight": true,
+              "navigation": {
+                "prevEl": "#prev-industry",
+                "nextEl": "#next-industry"
+              }
+            }'>
+              <div class="swiper-wrapper text-lg-start text-center">
+
+              {% for item in theContent.IndustriesText.ContentItems %}
+              <!-- Swiper item -->
+              {{item | shape_build_display : "Summary" | shape_render }}
+              {% endfor %}
+
+              </div>
+            </div>
+
+            <!-- Swiper controls (Prev / next buttons) -->
+            <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
+              <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-7 offset-xl-1 order-1 order-lg-2">
+
+            <!-- Swiper tabs (Industry images) -->
+            <div class="swiper-tabs">
+
+            {% for image in theContent.IndustriesImages.ContentItems %}
+            {{image | shape_build_display : "Summary" | shape_render }}
+            {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+</main>
+
+
+<!-- Back to top button -->
+<a href="#top" class="btn-scroll-top" data-scroll>
+    <i class="btn-scroll-top-icon fa-solid fa-chevron-up"></i>
+</a>
