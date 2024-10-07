@@ -37,6 +37,9 @@ msgstr "Prilagođena softverska rješenja"
 msgid "Our Featured Projects"
 msgstr "Naši istaknuti projekti"
 
+msgid "Our Featured Orchard Core Projects"
+msgstr "Naši istaknuti Orchard Core projekti"
+
 msgid "Show Page"
 msgstr "Prikaži stranicu"
 
@@ -51,3 +54,51 @@ msgstr "Više"
 
 msgid "Read less"
 msgstr "Sakrij"
+
+msgid "Harvest the Power of"
+msgstr "Iskoristite snagu"
+
+msgid "Orchard Core"
+msgstr "Orchard Core-a"
+
+msgid "Custom Development for "
+msgstr "Prilagođeni razvoj za"
+
+msgid "Your"
+msgstr "Vaše"
+
+msgid "  Growing Needs!"
+msgstr "  Rastuće potrebe!"
+
+msgid "Why choose Altibiz for Orchard Core development"
+msgstr "Zašto odabrati Altibiz za razvoj Orchard Core"
+
+msgid "Custom Orchard Core solutions"
+msgstr "Prilagođena Orchard Core rješenja"
+
+msgid "We create flexible and scalable systems tailored to your unique business needs"
+msgstr "Izrađujemo fleksibilne i skalabilne sustave prilagođene vašim jedinstvenim poslovnim potrebama"
+
+msgid "Experienced professionals"
+msgstr "Iskusni stručnjaci"
+
+msgid "Our team of experienced Orchard Core developers guides you through every step of the process"
+msgstr "Naš tim iskusnih Orchard Core programera vodi vas kroz svaki korak procesa"
+
+msgid "Comprehensive services"
+msgstr "Sveobuhvatne usluge"
+
+msgid "We provide a full spectrum of services from design and development to deployment and maintenance"
+msgstr "Pružamo potpuni spektar usluga od dizajna i razvoja do implementacije i održavanja"
+
+msgid "Client-focused"
+msgstr "Fokus na klijenta"
+
+msgid "Your business goals and needs are at the center of our solutions"
+msgstr "Vaši poslovni ciljevi i potrebe su u središtu naših rješenja"
+
+msgid "Transparency and collaboration"
+msgstr "Transparentnost i suradnja"
+
+msgid "We ensure open communication and timely delivery for your complete satisfaction"
+msgstr "Osiguravamo otvorenu komunikaciju i pravovremenu isporuku za vaše potpuno zadovoljstvo"
