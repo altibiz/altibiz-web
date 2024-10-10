@@ -64,11 +64,11 @@ msgstr "Orchard Core-a"
 msgid "Custom Development for "
 msgstr "Prilagođeni razvoj za"
 
-msgid "Your"
-msgstr "Vaše"
+msgid "your"
+msgstr "vaše"
 
-msgid "  Growing Needs!"
-msgstr "  Rastuće potrebe!"
+msgid "  growing needs!"
+msgstr "  rastuće potrebe!"
 
 msgid "Why choose Altibiz for Orchard Core development"
 msgstr "Zašto odabrati Altibiz za razvoj Orchard Core"
