@@ -59,51 +59,8 @@ assign theContent = Model.ContentItem.Content
 		</div>
 	</section>
 
-
-
-	<!-- Services -->
-	<section class="container mb-5 pb-lg-5 pb-md-4 pb-3 " >
-		<div class=" mt-5 custom-container">
-			<h2 class="h1 mt-5 mb-lg-5  mb-4 pb-lg-0 pb-md-2 text-center">{{"Сustom Software Solutions" | t}}</h2>
-			<a class="anchor" name="services"></a>
-		</div>
-		<!-- Swiper slider -->
-		<div class="swiper mb-xl-3" data-swiper-options='{
-          "spaceBetween": 24,
-          "breakpoints": {
-            "0": {
-              "slidesPerView": 1
-            },
-            "500": {
-              "slidesPerView": 2
-            },
-            "768": {
-              "slidesPerView": 3
-            },
-            "1200": {
-              "slidesPerView": 4
-            }
-          },
-          "pagination": {
-            "el": ".swiper-pagination",
-            "clickable": true
-          }
-        }'>
-			<div class="swiper-wrapper">
-				{% for service in theContent.Services.ContentItems %}
-				{{
-				service | shape_build_display : "Summary" | shape_render
-				}}
-				{% endfor %}
-			</div>
-
-			<!-- Swiper pagination -->
-			<div class="swiper-pagination position-static mt-4 pt-lg-3 pt-2"></div>
-		</div>
-	</section>
-
 	<!-- Technologies -->
-	<section class="container mb-5 pb-lg-5 pb-md-4 pb-3">
+	<section class="container mt-5 mb-5 pb-lg-5 pb-md-4 pb-3">
 
 		<!-- Swiper slider -->
 		<div class="swiper mb-xl-3 text-center" data-swiper-options='{
@@ -139,6 +96,47 @@ assign theContent = Model.ContentItem.Content
 		</div>
 	</section>
 
+
+    <!-- Services -->
+    <section class="container" >
+        <div class=" mt-5 custom-container">
+            <h2 class="h1 mt-5 mb-lg-5  mb-4 pb-lg-0 text-center">{{"Сustom Software Solutions" | t}}</h2>
+            <a class="anchor" name="services"></a>
+        </div>
+        <!-- Swiper slider -->
+        <div class="swiper mb-xl-3" data-swiper-options='{
+          "spaceBetween": 24,
+          "breakpoints": {
+            "0": {
+              "slidesPerView": 1
+            },
+            "500": {
+              "slidesPerView": 2
+            },
+            "768": {
+              "slidesPerView": 3
+            },
+            "1200": {
+              "slidesPerView": 4
+            }
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          }
+        }'>
+			<div class="swiper-wrapper">
+				{% for service in theContent.Services.ContentItems %}
+				{{
+				service | shape_build_display : "Summary" | shape_render
+				}}
+				{% endfor %}
+			</div>
+
+			<!-- Swiper pagination -->
+			<div class="swiper-pagination position-static mt-4 pt-lg-3 pt-2"></div>
+		</div>
+	</section>
 
 
 	<!-- Clients (carousel on screens < 1100px) -->
