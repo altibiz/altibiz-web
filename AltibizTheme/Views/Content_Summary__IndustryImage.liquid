@@ -4,6 +4,6 @@
 {% else %}
 <div id={{Model.ContentItem.Content.IndustryImage.Id.Text}} class="swiper-tab">
 {% endif %}
-    <img src={{Model.ContentItem.Content.IndustryImage.Media.Paths[0] | asset_url | resize_url: profile: 'profile800x600', anchor: anchor}} class="rounded-3" alt="Image">
+    <img src={{Model.ContentItem.Content.IndustryImage.Media.Paths[0] | asset_url | resize_url: profile: 'profile600x600', anchor: anchor}} class="rounded-3" alt="Image">
 </div>
 
