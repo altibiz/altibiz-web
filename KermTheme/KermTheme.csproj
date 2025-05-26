@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
 
-	<ItemGroup>
+  <ItemGroup>
 		<PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="2.1.7" alias="abs" />
-		<PackageReference Include="OrchardCore.Theme.Targets" Version="2.1.7" />
+	  <PackageReference Include="OrchardCore.Theme.Targets" Version="2.1.7" />
 		<PackageReference Include="OrchardCore.DisplayManagement" Version="2.1.7" />
-	</ItemGroup>
+  </ItemGroup>
 
 </Project>

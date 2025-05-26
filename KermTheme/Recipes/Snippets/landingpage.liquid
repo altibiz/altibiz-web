@@ -1,10 +1,10 @@
-{% zone "Header" %}
+﻿{% zone "Header" %}
 <!-- Header -->
 <header class="masthead">
     <div class="container">
-        <div class="masthead-subheading">Welcome To Our Studio!</div>
+        <div class="masthead-subheading">Dobrodošli u naš studio!</div>
         <div class="masthead-heading text-uppercase">{{ Model.ContentItem | display_text }}</div>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Saznaj više</a>
     </div>
 </header>
 {% endzone %}
@@ -14,7 +14,7 @@
 <section class="page-section" id="services">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
+            <h2 class="section-heading text-uppercase">Usluge</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
         <div class="row text-center">
@@ -38,7 +38,7 @@
 <section class="page-section bg-light" id="portfolio">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
+            <h2 class="section-heading text-uppercase">Portfelj</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
         <div class="row">
@@ -68,7 +68,7 @@
 <section class="page-section" id="about">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
+            <h2 class="section-heading text-uppercase">O nama</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
         <ul class="timeline">
@@ -91,9 +91,9 @@
             <li class="timeline-inverted">
                 <div class="timeline-image">
                     <h4>
-                        Be Part
-                        <br>Of Our
-                        <br>Story!
+                        Budite dio
+                        <br>naše
+                        <br>priče!
                     </h4>
                 </div>
             </li>
@@ -107,7 +107,7 @@
 <section class="page-section bg-light" id="team">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+            <h2 class="section-heading text-uppercase">Naš nevjerojatan tim</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
         <div class="row">
@@ -118,17 +118,17 @@
                     <h4>{{ member.DisplayText }}</h4>
                     <p class="text-muted">{{ member.TeamMember.Occupation.Text }}</p>
                     {% if member.TeamMember.Twitter.Text.size > 0 %}
-                    <a class="btn btn-dark btn-social mx-2" href="https://www.twitter.com/{{ member.TeamMember.Twitter.Text }}" aria-label="{{ member.DisplayText }} X (Twitter) Profile">
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.twitter.com/{{ member.TeamMember.Twitter.Text }}" aria-label="{{ member.DisplayText }} X (Twitter) profil">
                         <i class="fab fa-x-twitter"></i>
                     </a>
                     {% endif %}
                     {% if member.TeamMember.Facebook.Text.size > 0 %}
-                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/{{ member.TeamMember.Facebook.Text }}" aria-label="{{ member.DisplayText }} Facebook Profile">
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/{{ member.TeamMember.Facebook.Text }}" aria-label="{{ member.DisplayText }} Facebook profil">
                         <i class="fab fa-facebook"></i>
                     </a>
                     {% endif %}
                     {% if member.TeamMember.LinkedIn.Text.size > 0 %}
-                    <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/{{ member.TeamMember.LinkedIn.Text }}" aria-label="{{ member.DisplayText }} LinkedIn Profile">
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/{{ member.TeamMember.LinkedIn.Text }}" aria-label="{{ member.DisplayText }} LinkedIn profil">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     {% endif %}
@@ -166,35 +166,35 @@
 <section class="page-section" id="contact">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h2 class="section-heading text-uppercase">Kontaktirajte nas</h2>
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
         <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
+                        <input class="form-control" id="name" type="text" placeholder="Vaše ime *" required="required" data-validation-required-message="Unesite svoje ime." />
                         <p class="help-block text-danger"></p>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                        <input class="form-control" id="email" type="email" placeholder="Vaš email *" required="required" data-validation-required-message="Unesite svoju email adresu." />
                         <p class="help-block text-danger"></p>
                     </div>
                     <div class="form-group mb-md-0">
-                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
+                        <input class="form-control" id="phone" type="tel" placeholder="Vaš telefon *" required="required" data-validation-required-message="Unesite svoj broj telefona." />
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group form-group-textarea mb-md-0">
-                        <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                        <textarea class="form-control" id="message" placeholder="Vaša poruka *" required="required" data-validation-required-message="Unesite poruku."></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
             </div>
             <div class="text-center">
                 <div id="success"></div>
-                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Pošalji poruku</button>
             </div>
         </form>
     </div>
@@ -205,7 +205,7 @@
 <div class="portfolio-modal modal fade" id="portfolioModal{{ forloop.index }}" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/KermTheme/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="/KermTheme/assets/img/close-icon.svg" alt="Zatvori modal" /></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -217,14 +217,14 @@
                             <p>{{ project.HtmlBodyPart.Html | raw }}</p>
                             {% comment %}
                             <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Threads</li>
-                                <li>Category: Illustration</li>
+                                <li>Datum: Siječanj 2017</li>
+                                <li>Klijent: Threads</li>
+                                <li>Kategorija: Ilustracija</li>
                             </ul>
                             {% endcomment %}
                             <button class="btn btn-primary" data-bs-dismiss="modal" type="button">
                                 <i class="fa fa-times me-1"></i>
-                                Close Project
+                                Zatvori projekt
                             </button>
                         </div>
                     </div>

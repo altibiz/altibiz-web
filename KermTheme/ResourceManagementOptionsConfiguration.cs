@@ -12,7 +12,7 @@ public sealed class ResourceManagementOptionsConfiguration : IConfigureOptions<R
         _manifest = new ResourceManifest();
 
         _manifest
-            .DefineScript("KermTheme-bootstrap-bundle")
+            .DefineScript("kermtheme-bootstrap-bundle")
             .SetCdn("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.js")
             .SetCdnIntegrity("sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p", "sha384-8fq7CZc5BnER+jVlJI2Jafpbn4A9320TKhNJfYP33nneHep7sUg/OD30x7fK09pS")
             .SetVersion("5.1.3");
@@ -28,7 +28,7 @@ public sealed class ResourceManagementOptionsConfiguration : IConfigureOptions<R
             .SetVersion("7.0.10");
 
         _manifest
-            .DefineStyle("KermTheme-bootstrap-oc")
+            .DefineStyle("kermtheme-bootstrap-oc")
             .SetDependencies("KermTheme")
             .SetUrl("~/KermTheme/css/bootstrap-oc.min.css", "~/KermTheme/css/bootstrap-oc.css")
             .SetVersion("1.0.0");

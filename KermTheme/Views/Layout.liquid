@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     {% style name:"font-awesome", version:"6", at:"Head" %}
     {% style name:"kermtheme-bootstrap-oc", version:"1" %}  
-    {% script name:"KermTheme-bootstrap-bundle", at:"Foot" %}    
+    {% script name:"kermtheme-bootstrap-bundle", at:"Foot" %}    
     {% script name:"KermTheme", at:"Foot" %}
     {% resources type: "HeadScript" %}
     {% resources type: "HeadLink" %}
@@ -22,7 +22,7 @@
         <div class="container">
             <a class="navbar-brand" href="{{ '~/#page-top' | href }}">{{ Site.SiteName }}</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">{{ "Menu" | t }}<i class="fas fa-bars ms-1" aria-hidden="true"></i></button>
-            {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_fixed_duration: "00:05:00", cache_tag: "alias:main-menu", cache_context: "user.roles" %}
+            {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
         </div>
     </nav>
     {% render_section "Header", required: false %}

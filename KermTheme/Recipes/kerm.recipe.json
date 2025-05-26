@@ -1,25 +1,22 @@
 {
   "name": "Kerm",
   "displayName": "Kerm",
-  "description": "Ready to use company website.",
-  "author": "The Orchard Core Team",
+  "description": "Gotova web stranica za tvrtku.",
+  "author": "Orchard Core tim",
   "website": "https://orchardcore.net",
   "version": "1.0.0",
   "issetuprecipe": true,
   "categories": [ "default" ],
   "tags": [ "kerm" ],
 
-  // The variables are evaluated the first time they are accessed, and reused across steps
   "variables": {
     "landingContentItemId": "[js:uuid()]"
-    // "now": "[js: new Date().toISOString()]"
   },
 
   "steps": [
     {
       "name": "feature",
       "enable": [
-        // SaaS
         "OrchardCore.HomeRoute",
         "OrchardCore.Admin",
         "OrchardCore.Diagnostics",
@@ -33,8 +30,6 @@
         "OrchardCore.Settings",
         "OrchardCore.Themes",
         "OrchardCore.Users",
-
-        // Content Management
         "OrchardCore.Alias",
         "OrchardCore.Autoroute",
         "OrchardCore.Html",
@@ -58,8 +53,6 @@
         "OrchardCore.Title",
         "OrchardCore.Templates",
         "OrchardCore.Widgets",
-
-        // Themes
         "KermTheme",
         "TheAdmin",
         "SafeMode"
@@ -74,23 +67,38 @@
       "name": "Roles",
       "Roles": [
         {
+          "Name": "Administrator",
+          "Description": "Sistemska uloga koja daje sve dozvole dodijeljenim korisnicima.",
+          "Permissions": []
+        },
+        {
           "Name": "Moderator",
-          "Description": "Grants users the ability to moderate content.",
+          "Description": "Daje korisnicima mogućnost moderiranja sadržaja.",
           "Permissions": []
         },
         {
           "Name": "Editor",
-          "Description": "Grants users the ability to edit existing content.",
+          "Description": "Daje korisnicima mogućnost uređivanja postojećeg sadržaja.",
           "Permissions": []
         },
         {
           "Name": "Author",
-          "Description": "Grants users the ability to create content.",
+          "Description": "Daje korisnicima mogućnost kreiranja sadržaja.",
           "Permissions": []
         },
         {
           "Name": "Contributor",
-          "Description": "Grants users the ability to contribute content.",
+          "Description": "Daje korisnicima mogućnost doprinosa sadržaju.",
+          "Permissions": []
+        },
+        {
+          "Name": "Authenticated",
+          "Description": "Sistemska uloga koja predstavlja sve prijavljene korisnike.",
+          "Permissions": []
+        },
+        {
+          "Name": "Anonymous",
+          "Description": "Sistemska uloga koja predstavlja sve neprijavljene korisnike.",
           "Permissions": []
         }
       ]
@@ -112,7 +120,7 @@
       "ContentTypes": [
         {
           "Name": "Page",
-          "DisplayName": "Page",
+          "DisplayName": "Stranica",
           "Settings": {
             "ContentTypeSettings": {
               "Creatable": true,
@@ -168,7 +176,7 @@
         },
         {
           "Name": "LandingPage",
-          "DisplayName": "Landing Page",
+          "DisplayName": "Naslovna stranica",
           "Settings": {
             "ContentTypeSettings": {
               "Creatable": true,
@@ -216,8 +224,8 @@
               "Name": "Services",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "DisplayName": "Services",
-                  "Description": "Provides a collection behavior for your content item.",
+                  "DisplayName": "Usluge",
+                  "Description": "Omogućuje kolekcijsko ponašanje za vašu stavku sadržaja.",
                   "Position": "3"
                 },
                 "BagPartSettings": {
@@ -237,8 +245,8 @@
                   ]
                 },
                 "ContentTypePartSettings": {
-                  "DisplayName": "Portfolio",
-                  "Description": "Provides a collection behavior for your content item.",
+                  "DisplayName": "Portfelj",
+                  "Description": "Omogućuje kolekcijsko ponašanje za vašu stavku sadržaja.",
                   "Position": "4"
                 }
               }
@@ -248,8 +256,8 @@
               "Name": "About",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "DisplayName": "About",
-                  "Description": "A collection of milestones",
+                  "DisplayName": "O nama",
+                  "Description": "Kolekcija prekretnica",
                   "Position": "5"
                 },
                 "BagPartSettings": {
@@ -264,8 +272,8 @@
               "Name": "Team",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "DisplayName": "Team",
-                  "Description": "Team members",
+                  "DisplayName": "Tim",
+                  "Description": "Članovi tima",
                   "Position": "6"
                 },
                 "BagPartSettings": {
@@ -280,8 +288,8 @@
               "Name": "Clients",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "DisplayName": "Clients",
-                  "Description": "Provides a collection behavior for your content item.",
+                  "DisplayName": "Klijenti",
+                  "Description": "Omogućuje kolekcijsko ponašanje za vašu stavku sadržaja.",
                   "Position": "7"
                 },
                 "BagPartSettings": {
@@ -295,7 +303,7 @@
         },
         {
           "Name": "Service",
-          "DisplayName": "Service",
+          "DisplayName": "Usluga",
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Service",
@@ -328,7 +336,7 @@
         },
         {
           "Name": "Project",
-          "DisplayName": "Project",
+          "DisplayName": "Projekt",
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Project",
@@ -361,7 +369,7 @@
         },
         {
           "Name": "Milestone",
-          "DisplayName": "Milestone",
+          "DisplayName": "Prekretnica",
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Milestone",
@@ -394,7 +402,7 @@
         },
         {
           "Name": "TeamMember",
-          "DisplayName": "Team Member",
+          "DisplayName": "Član tima",
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "TeamMember",
@@ -418,7 +426,7 @@
         },
         {
           "Name": "Client",
-          "DisplayName": "Client",
+          "DisplayName": "Klijent",
           "ContentTypePartDefinitionRecords": [
             {
               "PartName": "Client",
@@ -465,7 +473,7 @@
         },
         {
           "Name": "Blockquote",
-          "DisplayName": "Blockquote",
+          "DisplayName": "Citat",
           "Settings": {
             "ContentTypeSettings": {
               "Draftable": true,
@@ -488,7 +496,7 @@
         },
         {
           "Name": "Container",
-          "DisplayName": "Container",
+          "DisplayName": "Kontejner",
           "Settings": {
             "ContentTypeSettings": {
               "Draftable": true,
@@ -520,7 +528,7 @@
         },
         {
           "Name": "Image",
-          "DisplayName": "Image",
+          "DisplayName": "Slika",
           "Settings": {
             "ContentTypeSettings": {
               "Draftable": true,
@@ -552,7 +560,7 @@
         },
         {
           "Name": "Paragraph",
-          "DisplayName": "Paragraph",
+          "DisplayName": "Odlomak",
           "Settings": {
             "ContentTypeSettings": {
               "Draftable": true,
@@ -584,11 +592,11 @@
               "Name": "IconClass",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Icon Class",
+                  "DisplayName": "Ikona (CSS klasa)",
                   "Position": "0"
                 },
                 "TextFieldSettings": {
-                  "Hint": "The icon css class from font-awesome. e.g., fa-laptop, fa-shopping-cart, fa-lock"
+                  "Hint": "CSS klasa ikone iz font-awesome. npr. fa-laptop, fa-shopping-cart, fa-lock"
                 }
               }
             }
@@ -603,7 +611,7 @@
               "Name": "Image",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Image",
+                  "DisplayName": "Slika",
                   "Position": "1"
                 },
                 "MediaFieldSettings": {
@@ -617,11 +625,11 @@
               "Name": "Category",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Category",
+                  "DisplayName": "Kategorija",
                   "Position": "0"
                 },
                 "TextFieldSettings": {
-                  "Hint": "The category that is displayed below the title"
+                  "Hint": "Kategorija prikazana ispod naslova"
                 }
               }
             }
@@ -636,7 +644,7 @@
               "Name": "Date",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Date",
+                  "DisplayName": "Datum",
                   "Position": "0"
                 }
               }
@@ -646,7 +654,7 @@
               "Name": "Image",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Image",
+                  "DisplayName": "Slika",
                   "Position": "1"
                 },
                 "MediaFieldSettings": {
@@ -666,7 +674,7 @@
               "Name": "Occupation",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Occupation",
+                  "DisplayName": "Zanimanje",
                   "Position": "0"
                 }
               }
@@ -676,7 +684,7 @@
               "Name": "Picture",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Picture",
+                  "DisplayName": "Slika",
                   "Position": "1"
                 },
                 "MediaFieldSettings": {
@@ -694,7 +702,7 @@
                   "Position": "2"
                 },
                 "TextFieldSettings": {
-                  "Hint": "Twitter handle, e.g. @BillGates"
+                  "Hint": "Twitter korisničko ime, npr. @BillGates"
                 }
               }
             },
@@ -707,7 +715,7 @@
                   "Position": "3"
                 },
                 "TextFieldSettings": {
-                  "Hint": "Facebook handle"
+                  "Hint": "Facebook korisničko ime"
                 }
               }
             },
@@ -720,7 +728,7 @@
                   "Position": "4"
                 },
                 "TextFieldSettings": {
-                  "Hint": "LinkedIn handle"
+                  "Hint": "LinkedIn korisničko ime"
                 }
               }
             }
@@ -765,7 +773,7 @@
               "Name": "Content",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Content",
+                  "DisplayName": "Sadržaj",
                   "Editor": "Multiline",
                   "Position": "0"
                 }
@@ -782,7 +790,7 @@
               "Name": "Quote",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Quote",
+                  "DisplayName": "Citat",
                   "Position": "0",
                   "Editor": "TextArea"
                 }
@@ -803,7 +811,7 @@
               "Name": "Media",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Image",
+                  "DisplayName": "Slika",
                   "Position": "0"
                 },
                 "MediaFieldSettings": {
@@ -817,11 +825,11 @@
               "Name": "Caption",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Caption",
+                  "DisplayName": "Opis",
                   "Position": "1"
                 },
                 "TextFieldSettings": {
-                  "Hint": "A description of the image used as title or alternate text"
+                  "Hint": "Opis slike koji se koristi kao naslov ili alternativni tekst"
                 }
               }
             }
@@ -836,7 +844,7 @@
               "Name": "Content",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Content",
+                  "DisplayName": "Sadržaj",
                   "Position": "0",
                   "Editor": "Wysiwyg"
                 }
@@ -852,7 +860,7 @@
         {
           "ContentItemId": "[js: uuid()]",
           "ContentType": "RawHtml",
-          "DisplayText": "Footer",
+          "DisplayText": "Podnožje",
           "Latest": true,
           "Published": true,
           "Owner": "[js: parameters('AdminUserId')]",
@@ -887,7 +895,7 @@
               }
             ]
           },
-          "Description": "The widgets in this layer are displayed on any page of this site."
+          "Description": "Widgeti u ovom sloju prikazuju se na svakoj stranici ove web stranice."
         },
         {
           "Name": "Homepage",
@@ -902,7 +910,7 @@
               }
             ]
           },
-          "Description": "The widgets in this layer are only displayed on the homepage."
+          "Description": "Widgeti u ovom sloju prikazuju se samo na naslovnoj stranici."
         }
       ]
     },
@@ -986,21 +994,21 @@
           "ContentItemId": "[js:uuid()]",
           "ContentItemVersionId": "[js:uuid()]",
           "ContentType": "Menu",
-          "DisplayText": "Main Menu",
+          "DisplayText": "Glavni izbornik",
           "Latest": true,
           "Published": true,
           "Owner": "[js: parameters('AdminUserId')]",
           "Author": "[js: parameters('AdminUsername')]",
           "MenuPart": {},
           "TitlePart": {
-            "Title": "Main Menu"
+            "Title": "Glavni izbornik"
           },
           "MenuItemsListPart": {
             "MenuItems": [
               {
                 "ContentType": "LinkMenuItem",
                 "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Services",
+                "DisplayText": "Usluge",
                 "LinkMenuItemPart": {
                   "Name": "Services",
                   "Url": "~/#services"
@@ -1009,7 +1017,7 @@
               {
                 "ContentType": "LinkMenuItem",
                 "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Portfolio",
+                "DisplayText": "Portfelj",
                 "LinkMenuItemPart": {
                   "Name": "Portfolio",
                   "Url": "~/#portfolio"
@@ -1018,7 +1026,7 @@
               {
                 "ContentType": "LinkMenuItem",
                 "ContentItemId": "[js:uuid()]",
-                "DisplayText": "About",
+                "DisplayText": "O nama",
                 "LinkMenuItemPart": {
                   "Name": "About",
                   "Url": "~/#about"
@@ -1027,7 +1035,7 @@
               {
                 "ContentType": "LinkMenuItem",
                 "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Team",
+                "DisplayText": "Tim",
                 "LinkMenuItemPart": {
                   "Name": "Team",
                   "Url": "~/#team"
@@ -1036,7 +1044,7 @@
               {
                 "ContentType": "LinkMenuItem",
                 "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Contact",
+                "DisplayText": "Kontakt",
                 "LinkMenuItemPart": {
                   "Name": "Contact",
                   "Url": "~/#contact"
@@ -1158,7 +1166,7 @@
                 },
                 "TitlePart": {
                   "Title": "Threads"
-                }
+        }
               },
               {
                 "ContentItemId": "[js:uuid()]",
@@ -1277,7 +1285,7 @@
                   "Image": {
                     "Paths": [
                       "/portfolio/6.jpg"
-                    ]
+      ]
                   },
                   "Category": {
                     "Text": "Photography"
@@ -1393,7 +1401,7 @@
                 },
                 "HtmlBodyPart": {
                   "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\r\n"
-                },
+    },
                 "TitlePart": {
                   "Title": "Phase Two Expansion"
                 }
@@ -1603,7 +1611,7 @@
       "name": "Templates",
       "Templates": {
         "Content__LandingPage": {
-          "Description": "A template for the Landing Page content type",
+          "Description": "Predložak za sadržaj tipa Naslovna stranica",
           "Content": "[file:text('Snippets/landingpage.liquid')]"
         }
       }
@@ -1612,7 +1620,7 @@
       "name": "MediaProfiles",
       "MediaProfiles": {
         "medium": {
-          "Hint": "A medium image (600px x 480px)",
+          "Hint": "Srednja slika (600px x 480px)",
           "Width": 600,
           "Height": 480,
           "Mode": 0,
@@ -1620,7 +1628,7 @@
           "Quality": 100
         },
         "small": {
-          "Hint": "A small image (240px x 240px)",
+          "Hint": "Mala slika (240px x 240px)",
           "Width": 240,
           "Height": 240,
           "Mode": 0,
@@ -1628,7 +1636,7 @@
           "Quality": 100
         },
         "extrasmall": {
-          "Hint": "A extra small image (160px x 160px)",
+          "Hint": "Vrlo mala slika (160px x 160px)",
           "Width": 160,
           "Height": 160,
           "Mode": 0,
