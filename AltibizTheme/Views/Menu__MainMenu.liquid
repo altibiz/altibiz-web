@@ -1,3 +1,4 @@
+{% assign navbarShape = "Navbar" | shape_new %}
 <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
     <div class="container px-3">
         <a class="navbar-brand pe-3" href="{{ '~/#page-top' | href }}"><img src="/media/altibiz-logo/Alti_logo.png" width="200" height="300" alt="Company logo"> </a>
@@ -14,8 +15,8 @@
                 </ul>
             </div>
             <div class="offcanvas-header border-top border-light">
-              {% shape "ContentCulturePicker" %}
-            </div>
+              {{ navbarShape | shape_render }}
+        </div>
         </div>
 
         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +24,7 @@
         </button>
 
         <span class="d-none d-lg-inline-flex">
-        {% shape "ContentCulturePicker" %}
+        {{ navbarShape | shape_render }}
 		</span>
         
 

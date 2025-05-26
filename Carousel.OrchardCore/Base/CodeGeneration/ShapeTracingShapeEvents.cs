@@ -1,13 +1,18 @@
 ﻿using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Http;
 using OrchardCore.DisplayManagement.Implementation;
 using OrchardCore.DisplayManagement.Shapes;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Carousel.OrchardCore.Base.CodeGeneration
+namespace Members.Utils
 {
     public class ShapeTracingShapeEvents : IShapeDisplayEvents
     {
+        private readonly IHttpContextAccessor _hca;
+
+        public ShapeTracingShapeEvents(IHttpContextAccessor hca) => _hca = hca;
+
         public Task DisplayedAsync(ShapeDisplayContext context)
         {
 
@@ -18,7 +23,7 @@ namespace Carousel.OrchardCore.Base.CodeGeneration
 
             builder.AppendLine();
             builder.AppendHtmlLine("<!-- ");
-            builder.AppendHtmlLine("Type: "+shapeMetadata.Type);
+            builder.AppendHtmlLine(shapeMetadata.Type);
             builder.AppendLine();
 
             void AddIfNotNullOrEmpty(string name, string value)

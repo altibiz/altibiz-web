@@ -408,3 +408,5 @@ FodyWeavers.xsd
 /Web/Localization/*/TheBlogTheme.po
 /Web/Localization/*/TheAgencyTheme.po
 
+/Web/App_Data/Sites
+/Web/wwwroot/*/is-cache

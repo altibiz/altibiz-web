@@ -1,6 +1,6 @@
 using System;
 
-namespace Carousel.OrchardCore.Base.CodeGeneration
+namespace Lombiq.HelpfulExtensions.Extensions.CodeGeneration
 {
     public class ContentTypeMigrationsViewModel
     {

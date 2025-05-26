@@ -1,3 +1,4 @@
+{% assign navbarShape = "Navbar" | shape_new %}
 <div id="navbarNav" class="offcanvas offcanvas-end bg-dark"">
     <div class="offcanvas-header border-bottom border-light">
         <h5 class="offcanvas-title text-white">Menu</h5>
@@ -10,7 +11,5 @@
             {% endfor %}  
         </ul>
     </div>
-    <div class="offcanvas-header border-top border-light">
-        {% shape "ContentCulturePicker" %}
-    </div>
+	{{ navbarShape | shape_render }}
 </div>

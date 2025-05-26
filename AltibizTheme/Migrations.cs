@@ -25,9 +25,9 @@ namespace AltibizTheme
 			return 1;
 		}
 
-		public int UpdateFrom1()
+		public async Task<int> UpdateFrom1()
 		{
-			_contentDefinitionManager.AlterPartDefinition("Service", part => part
+			await _contentDefinitionManager.AlterPartDefinitionAsync("Service", part => part
 				.WithField("IconClass", field => field
 					.OfType("TextField")
 					.WithDisplayName("Image Path or Icon Class")

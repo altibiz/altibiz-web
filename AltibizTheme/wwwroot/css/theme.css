@@ -12855,10 +12855,6 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
   border: none !important;
   line-height: 1;
 }
-.dropdown-toggle::after {
-  margin-right: -0.25rem;
-  content: "\ea4a";
-}
 .dropdown-toggle.fs-sm::after 
   margin-top: -0.0625rem !important;
 }

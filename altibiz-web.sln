@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carousel.OrchardCore", "Car
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1ED700F-D577-4C31-9311-10B22A5071BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KermTheme", "KermTheme\KermTheme.csproj", "{F47BDA67-BF68-7BA4-F635-4E33336E7122}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{5A91A36B-D78A-45E6-B655-7C4922E6D288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A91A36B-D78A-45E6-B655-7C4922E6D288}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A91A36B-D78A-45E6-B655-7C4922E6D288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47BDA67-BF68-7BA4-F635-4E33336E7122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47BDA67-BF68-7BA4-F635-4E33336E7122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47BDA67-BF68-7BA4-F635-4E33336E7122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47BDA67-BF68-7BA4-F635-4E33336E7122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
