@@ -855,31 +855,6 @@
       ]
     },
     {
-      "name": "content",
-      "Data": [
-        {
-          "ContentItemId": "[js: uuid()]",
-          "ContentType": "RawHtml",
-          "DisplayText": "Podnožje",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUserId')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "LayerMetadata": {
-            "Layer": "Always",
-            "Zone": "Footer",
-            "RenderTitle": false,
-            "Position": 10
-          },
-          "RawHtml": {
-            "Content": {
-              "Html": "[file:text('Snippets/footer.html')]"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "layers",
       "Layers": [
         {
@@ -932,6 +907,10 @@
         {
           "TargetPath": "about/4.jpg",
           "SourcePath": "../wwwroot/assets/img/about/4.jpg"
+        },
+        {
+          "TargetPath": "about/5.png",
+          "SourcePath": "../wwwroot/assets/img/about/5.png"
         },
         {
           "TargetPath": "logos/ibm.svg",
@@ -1008,15 +987,6 @@
               {
                 "ContentType": "LinkMenuItem",
                 "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Usluge",
-                "LinkMenuItemPart": {
-                  "Name": "Services",
-                  "Url": "~/#services"
-                }
-              },
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "[js:uuid()]",
                 "DisplayText": "Portfelj",
                 "LinkMenuItemPart": {
                   "Name": "Portfolio",
@@ -1030,15 +1000,6 @@
                 "LinkMenuItemPart": {
                   "Name": "About",
                   "Url": "~/#about"
-                }
-              },
-              {
-                "ContentType": "LinkMenuItem",
-                "ContentItemId": "[js:uuid()]",
-                "DisplayText": "Tim",
-                "LinkMenuItemPart": {
-                  "Name": "Team",
-                  "Url": "~/#team"
                 }
               },
               {
@@ -1074,71 +1035,7 @@
             "Title": "[js: parameters('SiteName')]"
           },
           "Services": {
-            "ContentItems": [
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Service",
-                "DisplayText": "E-Commerce",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Service": {
-                  "IconClass": {
-                    "Text": "fa-shopping-cart"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-                },
-                "TitlePart": {
-                  "Title": "E-Commerce"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Service",
-                "DisplayText": "Responsive Design",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Service": {
-                  "IconClass": {
-                    "Text": "fa-laptop"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-                },
-                "TitlePart": {
-                  "Title": "Responsive Design"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Service",
-                "DisplayText": "Web Security",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Service": {
-                  "IconClass": {
-                    "Text": "fa-lock"
-                  }
-                },
-                "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-                },
-                "TitlePart": {
-                  "Title": "Web Security"
-                }
-              }
-            ]
+            "ContentItems": [ ]
           },
           "Portfolio": {
             "ContentItems": [
@@ -1306,14 +1203,14 @@
                 "ContentItemId": "[js:uuid()]",
                 "ContentItemVersionId": "[js:uuid()]",
                 "ContentType": "Milestone",
-                "DisplayText": "Our Humble Beginnings",
+                "DisplayText": "Naši počeci",
                 "Latest": false,
                 "Published": false,
                 "Owner": null,
                 "Author": "[js: parameters('AdminUsername')]",
                 "Milestone": {
                   "Date": {
-                    "Text": "2009-2011"
+                    "Text": "Osnovani 1998."
                   },
                   "Image": {
                     "Paths": [
@@ -1322,24 +1219,24 @@
                   }
                 },
                 "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+                  "Html": "Tvrtka KERM PROMET d.o.o. osnovana je 1998. Organizirani smo kao mala tvrtka te zapošljavamo 10 ljudi sa znanjem i kvalifikacijama u građevinskoj industriji, crnoj metalurgiji, cjevovodima i naftnim rafinerijama."
                 },
                 "TitlePart": {
-                  "Title": "Our Humble Beginnings"
+                  "Title": "Naši počeci"
                 }
               },
               {
                 "ContentItemId": "[js:uuid()]",
                 "ContentItemVersionId": "[js:uuid()]",
                 "ContentType": "Milestone",
-                "DisplayText": "An Kerm is Born",
+                "DisplayText": "Naš fokus",
                 "Latest": false,
                 "Published": false,
                 "Owner": null,
                 "Author": "[js: parameters('AdminUsername')]",
                 "Milestone": {
                   "Date": {
-                    "Text": "March 2011"
+                    "Text": ""
                   },
                   "Image": {
                     "Paths": [
@@ -1348,24 +1245,24 @@
                   }
                 },
                 "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\r\n"
+                  "Html": "Tržište Hrvatske i regije. Zajedno sa našim partnerima kupcu omogućujemo usluge kupnje proizvoda, sastavljanja i instalacije."
                 },
                 "TitlePart": {
-                  "Title": "An Kerm is Born"
+                  "Title": "Naš fokus"
                 }
               },
               {
                 "ContentItemId": "[js:uuid()]",
                 "ContentItemVersionId": "[js:uuid()]",
                 "ContentType": "Milestone",
-                "DisplayText": "Transition to Full Service",
+                "DisplayText": "Naši glavni proizvodi",
                 "Latest": false,
                 "Published": false,
                 "Owner": null,
                 "Author": "[js: parameters('AdminUsername')]",
                 "Milestone": {
                   "Date": {
-                    "Text": "December 2015"
+                    "Text": ""
                   },
                   "Image": {
                     "Paths": [
@@ -1374,24 +1271,24 @@
                   }
                 },
                 "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+                  "Html": "Bešavne i šavne cijevi<br>Industrijski ventili za ANSI i DIN standard<br>Prirubnice<br>Fitinzi<br>Vijci i matice"
                 },
                 "TitlePart": {
-                  "Title": "Transition to Full Service"
+                  "Title": "Naši glavni proizvodi"
                 }
               },
               {
                 "ContentItemId": "[js:uuid()]",
                 "ContentItemVersionId": "[js:uuid()]",
                 "ContentType": "Milestone",
-                "DisplayText": "Phase Two Expansion",
+                "DisplayText": "Naši kupci",
                 "Latest": false,
                 "Published": false,
                 "Owner": null,
                 "Author": "[js: parameters('AdminUsername')]",
                 "Milestone": {
                   "Date": {
-                    "Text": "July 2020"
+                    "Text": ""
                   },
                   "Image": {
                     "Paths": [
@@ -1400,221 +1297,48 @@
                   }
                 },
                 "HtmlBodyPart": {
-                  "Html": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\r\n"
-    },
+                  "Html": "Naši kupci su: građevinske tvrtke, naftne rafinerije, električne i kemijske elektrane, brodska industrija i mnoge tvrtke za trgovinu."
+                },
                 "TitlePart": {
-                  "Title": "Phase Two Expansion"
+                  "Title": "Naši kupci"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Milestone",
+                "DisplayText": "Naši certifikati",
+                "Latest": false,
+                "Published": false,
+                "Owner": null,
+                "Author": "[js: parameters('AdminUsername')]",
+                "Milestone": {
+                  "Date": {
+                    "Text": ""
+                  },
+                  "Image": {
+                    "Paths": [
+                      "/about/5.png"
+                    ]
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "ISO 27001<br>ISO 9001"
+                },
+                "TitlePart": {
+                  "Title": "Naši certifikati"
                 }
               }
             ]
           },
           "Team": {
-            "ContentItems": [
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "TeamMember",
-                "DisplayText": "Parveen Anand",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "TeamMember": {
-                  "Occupation": {
-                    "Text": "Lead Designer"
-                  },
-                  "Picture": {
-                    "Paths": [
-                      "/team/1.jpg"
-                    ]
-                  },
-                  "Twitter": {
-                    "Text": "@"
-                  },
-                  "Facebook": {
-                    "Text": "@"
-                  },
-                  "LinkedIn": {
-                    "Text": "@"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Parveen Anand"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "TeamMember",
-                "DisplayText": "Diana Petersen",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "TeamMember": {
-                  "Occupation": {
-                    "Text": "Lead Marketer"
-                  },
-                  "Picture": {
-                    "Paths": [
-                      "/team/2.jpg"
-                    ]
-                  },
-                  "Twitter": {
-                    "Text": "@"
-                  },
-                  "Facebook": {
-                    "Text": "@"
-                  },
-                  "LinkedIn": {
-                    "Text": "@"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Diana Petersen"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "TeamMember",
-                "DisplayText": "Larry Parker",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "TeamMember": {
-                  "Occupation": {
-                    "Text": "Lead Developer"
-                  },
-                  "Picture": {
-                    "Paths": [
-                      "/team/3.jpg"
-                    ]
-                  },
-                  "Twitter": {
-                    "Text": "@"
-                  },
-                  "Facebook": {
-                    "Text": "@"
-                  },
-                  "LinkedIn": {
-                    "Text": "@"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Larry Parker"
-                }
-              }
-            ]
+            "ContentItems": []
           },
           "Clients": {
-            "ContentItems": [
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Client",
-                "DisplayText": "Microsoft",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Client": {
-                  "Logo": {
-                    "Paths": [
-                      "/logos/microsoft.svg"
-                    ]
-                  },
-                  "Url": {
-                    "Text": "#"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Microsoft"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Client",
-                "DisplayText": "Google",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Client": {
-                  "Logo": {
-                    "Paths": [
-                      "/logos/google.svg"
-                    ]
-                  },
-                  "Url": {
-                    "Text": "#"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Google"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Client",
-                "DisplayText": "Facebook",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Client": {
-                  "Logo": {
-                    "Paths": [
-                      "/logos/facebook.svg"
-                    ]
-                  },
-                  "Url": {
-                    "Text": "#"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Facebook"
-                }
-              },
-              {
-                "ContentItemId": "[js:uuid()]",
-                "ContentItemVersionId": "[js:uuid()]",
-                "ContentType": "Client",
-                "DisplayText": "IBM",
-                "Latest": false,
-                "Published": false,
-                "Owner": null,
-                "Author": "[js: parameters('AdminUsername')]",
-                "Client": {
-                  "Logo": {
-                    "Paths": [
-                      "/logos/ibm.svg"
-                    ]
-                  },
-                  "Url": {
-                    "Text": "#"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "IBM"
-                }
-              }
-            ]
+            "ContentItems": []
           }
         }
       ]
-    },
-    {
-      "name": "Templates",
-      "Templates": {
-        "Content__LandingPage": {
-          "Description": "Predložak za sadržaj tipa Naslovna stranica",
-          "Content": "[file:text('Snippets/landingpage.liquid')]"
-        }
-      }
     },
     {
       "name": "MediaProfiles",

@@ -2,9 +2,9 @@
 <!-- Header -->
 <header class="masthead">
     <div class="container">
-        <div class="masthead-subheading">Dobrodošli u naš studio!</div>
+        <div class="masthead-subheading">Vaš pouzdan partner za cijevi i armaturu</div>
         <div class="masthead-heading text-uppercase">{{ Model.ContentItem | display_text }}</div>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services">Saznaj više</a>
+        <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Saznaj više</a>
     </div>
 </header>
 {% endzone %}
@@ -14,8 +14,8 @@
 <section class="page-section" id="services">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Usluge</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Proizvodi</h2>
+            <h3 class="section-subheading text-muted">Nudimo između ostaloga:</h3>
         </div>
         <div class="row text-center">
             {% for service in Model.ContentItem.Content.Services.ContentItems %}
@@ -35,11 +35,11 @@
 
 {% if Model.ContentItem.Content.Portfolio.ContentItems.size > 0 %}
 <!-- Portfolio Grid -->
-<section class="page-section bg-light" id="portfolio">
+<section class="page-section bg-light d-none" id="portfolio">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Portfelj</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted">Naš portfelj se sastoji od sljedećeg</h3>
         </div>
         <div class="row">
             {% for project in Model.ContentItem.Content.Portfolio.ContentItems %}
@@ -69,7 +69,7 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">O nama</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted">Naša priča</h3>
         </div>
         <ul class="timeline">
             {% for milestone in Model.ContentItem.Content.About.ContentItems %}
@@ -79,8 +79,7 @@
                 </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4>{{ milestone.Milestone.Date.Text }}</h4>
-                        <h4 class="subheading">{{ milestone.DisplayText }}</h4>
+                        <h4>{{ milestone.DisplayText }}</h4>
                     </div>
                     <div class="timeline-body">
                         <p class="text-muted">{{ milestone.HtmlBodyPart.Html | raw }}</p>
@@ -91,9 +90,9 @@
             <li class="timeline-inverted">
                 <div class="timeline-image">
                     <h4>
-                        Budite dio
-                        <br>naše
-                        <br>priče!
+                        Odgovornost
+                        <br>pouzdanost
+                        <br>partnerstvo
                     </h4>
                 </div>
             </li>
@@ -107,8 +106,8 @@
 <section class="page-section bg-light" id="team">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Naš nevjerojatan tim</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Naš tim</h2>
+            <h3 class="section-subheading text-muted">Koji će vas pratiti u izvedbi vaših projekata.</h3>
         </div>
         <div class="row">
             {% for member in Model.ContentItem.Content.Team.ContentItems %}
@@ -136,7 +135,7 @@
             </div>
             {% endfor %}
         </div>
-        <div class="row">
+        <div class="row d-none">
             <div class="col-lg-8 mx-auto text-center">
                 <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
             </div>
@@ -167,7 +166,11 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Kontaktirajte nas</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-white">Čulinečka cesta 146, Zagreb
+            <br>+ 385 98 511 676
+            <br>(VAT) OIB: 76777439889
+            <br><a href="mailto:info@kerm-promet.hr">info@kerm-promet.hr</a>
+            </h3>
         </div>
         <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="row align-items-stretch mb-5">
@@ -234,3 +237,26 @@
     </div>
 </div>
 {% endfor %}
+
+{% zone "Footer" %}
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-start">
+                Copyright &copy; Kerm Promet
+                <!-- This script automatically adds the current year to your website footer-->
+                <!-- (credit: https://updateyourfooter.com/)-->
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </div>
+            <div class="col-lg-2 my-3 my-lg-0">
+                <img src="{{ '~/KermTheme/assets/img/eu-nextgen.jpg' | href }}" alt="EU Logo" class="img-fluid" style="max-height: 50px;">
+            </div>
+            <div class="col-lg-6 text-lg-end" style="font-size:10px">
+                Financira Europska unija – NextGenerationEU. Izneseni stavovi i mišljenja samo su autorova i ne odražavaju nužno službena stajališta Europske unije ili Europske komisije. Ni Europska unija ni Europska komisija ne mogu se smatrati odgovornima za njih.
+            </div>
+        </div>
+    </div>
+</footer>
+{% endzone %}
