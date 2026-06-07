@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,13 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Module.Targets" Version="2.1.7" />
-    <PackageReference Include="OrchardCore.ContentFields" Version="2.1.7" />
-    <PackageReference Include="OrchardCore.ContentManagement.Abstractions" Version="2.1.7" />
-    <PackageReference Include="OrchardCore.Data.Abstractions" Version="2.1.7" />
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="2.1.7" />
-    <PackageReference Include="OrchardCore.Flows" Version="2.1.7" />
-    <PackageReference Include="OrchardCore.Media" Version="2.1.7" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.ContentFields" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.ContentManagement.Abstractions" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.Data.Abstractions" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.Flows" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.Media" Version="2.2.1" />
   </ItemGroup>
 
 </Project>

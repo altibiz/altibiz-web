@@ -25,20 +25,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="OrchardCore.ContentFields" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.ContentLocalization" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.ContentManagement" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.DisplayManagement" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.Liquid.Abstractions" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.Media" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.Media.Abstractions" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.Menu" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.Module.Targets" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.Queries.Abstractions" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.ResourceManagement" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.Taxonomies" Version="2.1.7" />
-	  <PackageReference Include="OrchardCore.Theme.Targets" Version="2.1.7" />
+	  <PackageReference Include="OrchardCore.ContentFields" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.ContentLocalization" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.ContentManagement" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.DisplayManagement" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.Liquid.Abstractions" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.Media" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.Media.Abstractions" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.Menu" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.Module.Targets" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.Queries.Abstractions" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.ResourceManagement" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.Taxonomies" Version="2.2.1" />
+	  <PackageReference Include="OrchardCore.Theme.Targets" Version="2.2.1" />
 	</ItemGroup>
 
 	<ItemGroup>
